@@ -1,19 +1,21 @@
 # planfi skills
 
-A catalog of [planfi](https://planfi.app) Agent Skills — thin orchestration over the public
-**planfi MCP** (`https://ai.planfi.app/mcp`, no auth). All math + 150 years of market data
-live server-side; the skills just gather inputs and call the tools.
+**Free, open-source [Claude Code](https://docs.claude.com/en/docs/claude-code) Agent Skills that turn Claude into a personal-finance analyst.** Ask in plain English — "can I retire at 50?", "should I rent or buy?", "how do I cut my taxes?", "is this Airbnb a good investment?" — and get back real numbers: net-worth projections, FIRE age, Monte Carlo success rates, tax savings, payoff timelines, and property returns.
 
-> **Source of truth:** these skills are generated from the `planfi-app` monorepo and mirrored
-> here. Each skill also has its own canonical distribution repo (linked below). Don't edit here —
-> changes flow from the monorepo via CI.
+All the math (and 150+ years of market data) runs server-side on the **public planfi MCP** (`https://ai.planfi.app/mcp`, no auth). The skills just gather your inputs and call the tools.
+
+> **Source of truth:** these skills are generated from the `planfi-app` monorepo and mirrored here. Each skill also has its own canonical distribution repo (linked below). Don't edit here — changes flow from the monorepo via CI.
 
 ## Install
+
+Two commands in Claude Code — add the skill catalog, then connect the MCP that powers it:
 
 ```
 claude plugin marketplace add KameronKales/planfi-skills
 claude mcp add --transport http planfi https://ai.planfi.app/mcp
 ```
+
+Then install any skill from the catalog and just ask. Each skill below is also published as its own one-line marketplace at `holdequity/planfi-<name>`.
 
 ## Skills
 
