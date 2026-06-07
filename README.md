@@ -19,13 +19,15 @@ No spreadsheets, no signup, no API key. The math — and 150+ years of historica
 
 ## Quick start
 
-**Fastest — add any single skill with the [skills.sh](https://skills.sh) CLI** (one command, no setup; per-skill commands are in the table below):
+**Fastest — the [skills.sh](https://skills.sh) CLI** (any agent, no setup). Add this whole catalog (pick a skill, or grab them all), or install just one:
 
 ```
-npx skills add holdequity/planfi-<name>
+npx skills add KameronKales/planfi-skills          # choose from all 8
+npx skills add KameronKales/planfi-skills --all    # install all 8
+npx skills add holdequity/planfi-<name>            # just one skill (table below)
 ```
 
-**Or add the whole catalog in [Claude Code](https://docs.claude.com/en/docs/claude-code), then connect the MCP that powers it:**
+**Or, in [Claude Code](https://docs.claude.com/en/docs/claude-code), add the catalog as a plugin marketplace + connect the MCP that powers it:**
 
 ```
 claude plugin marketplace add KameronKales/planfi-skills
