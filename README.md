@@ -45,6 +45,38 @@ Install any skill from the catalog and just ask. Want only one? Each skill is al
 
 These skills are **thin orchestration** — they contain no financial logic of their own. Every calculation, every tax rule, and 150+ years of historical market data live server-side on the public **planfi MCP** (`https://ai.planfi.app/mcp` — no auth, no API key). A skill gathers your inputs, calls the right tool(s), and shows the result. Any MCP-capable agent gets the same answers; the skills just make it one-click inside Claude Code.
 
+## Use it in any MCP client (not just Claude Code)
+
+The skills are Claude Code packaging — but the engine is a standard
+[Model Context Protocol](https://modelcontextprotocol.io) server at
+`https://ai.planfi.app/mcp` (Streamable HTTP, no auth). Connect it from any
+MCP-capable agent and you get all the same tools directly. And because every
+tool is **self-orchestrating** — it reports its own assumed defaults and
+suggests the next step — you get solid answers even without a skill wrapper.
+
+Most clients take an `mcpServers` config block:
+
+```json
+{
+  "mcpServers": {
+    "planfi": { "type": "http", "url": "https://ai.planfi.app/mcp" }
+  }
+}
+```
+
+| Client | How to add it |
+|--------|---------------|
+| **Claude Code** | `claude mcp add --transport http planfi https://ai.planfi.app/mcp` |
+| **Cursor** | add the block above to `~/.cursor/mcp.json` (field: `url`) |
+| **Windsurf** | `~/.codeium/windsurf/mcp_config.json` (field: `serverUrl`) |
+| **Cline / VS Code** | paste the block into the Cline MCP settings |
+| **Claude Desktop & stdio-only clients** | bridge with `npx -y mcp-remote https://ai.planfi.app/mcp` |
+| **ChatGPT (custom connectors / Deep Research)** | add a connector pointing at the MCP URL |
+| **Custom / your own agent** | it's plain MCP Streamable HTTP — POST JSON-RPC `tools/list` / `tools/call` to the URL with `Accept: application/json, text/event-stream` |
+
+Field names vary slightly by client and version — check your client's MCP docs;
+the URL is always `https://ai.planfi.app/mcp`.
+
 ## Why PlanFi Skills
 
 - **Real models, not vibes** — Monte Carlo backtesting on real historical returns, tax-aware (AMT / NIIT / IRMAA), inflation-adjusted.
