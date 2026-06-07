@@ -1,6 +1,6 @@
 # PlanFi Skills — AI personal-finance & FIRE planning for Claude Code
 
-[![Claude Code Agent Skills](https://img.shields.io/badge/Claude%20Code-Agent%20Skills-d97757)](https://docs.claude.com/en/docs/claude-code) [![Powered by MCP](https://img.shields.io/badge/MCP-ai.planfi.app-3b82f6)](https://ai.planfi.app/mcp) [![License: MIT](https://img.shields.io/badge/License-MIT-22c55e.svg)](./LICENSE) ![Skills](https://img.shields.io/badge/skills-9-f59e0b)
+[![Claude Code Agent Skills](https://img.shields.io/badge/Claude%20Code-Agent%20Skills-d97757)](https://docs.claude.com/en/docs/claude-code) [![Powered by MCP](https://img.shields.io/badge/MCP-ai.planfi.app-3b82f6)](https://ai.planfi.app/mcp) [![License: MIT](https://img.shields.io/badge/License-MIT-22c55e.svg)](./LICENSE) ![Skills](https://img.shields.io/badge/skills-10-f59e0b)
 
 **Free, open-source [Claude Code](https://docs.claude.com/en/docs/claude-code) Agent Skills that turn Claude into a personal-finance & FIRE planning analyst.** Ask in plain English and get real numbers back — net-worth projections, your FIRE (financial-independence / retire-early) age, Monte Carlo success rates, tax savings, debt-payoff timelines, rent-vs-buy break-evens, and rental-property returns.
 
@@ -49,6 +49,7 @@ Then just ask.
 | [**debt-and-cashflow**](https://github.com/holdequity/planfi-debt-and-cashflow) | Pay down debt and route surplus cash optimally: avalanche/snowball debt payoff order, mortgage prepay vs invest, refinance break-even, a next-best-dollar funding waterfall, and student-loan strategy (IDR / PSLF / refinance vs aggressive payoff). | `npx skills add holdequity/planfi-debt-and-cashflow` |
 | [**fire-tracker**](https://github.com/holdequity/planfi-fire-tracker) | Track FIRE progress: are you already financially independent / can you coast, how you benchmark against peers, which net-worth milestones you've hit, and whether you can hit a target retirement age (with the easiest levers to pull). | `npx skills add holdequity/planfi-fire-tracker` |
 | [**self-employed-planner**](https://github.com/holdequity/planfi-self-employed-planner) | Plan self-employed / business-owner retirement: max Solo 401(k) vs SEP-IRA vs SIMPLE contribution room, the §199A QBI deduction (thresholds, W-2/UBIA cap, SSTB phaseout), and the S-corp reasonable-salary tradeoff (payroll tax vs QBI vs retirement room). | `npx skills add holdequity/planfi-self-employed-planner` |
+| [**relocation-planner**](https://github.com/holdequity/planfi-relocation-planner) | Compare retirement relocation / state-tax arbitrage by orchestrating the public planfi MCP — how much a move (e.g. CA→TX/FL) saves in state income tax, property tax, estate tax, and cost of living, and whether it's worth it. | `npx skills add holdequity/planfi-relocation-planner` |
 
 ## How it works
 

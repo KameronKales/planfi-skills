@@ -107,6 +107,17 @@
         "name": "holdequity",
         "url": "https://github.com/holdequity"
       }
+    },
+    {
+      "name": "relocation-planner",
+      "source": "./skills/relocation-planner",
+      "description": "Compare retirement relocation / state-tax arbitrage by orchestrating the public planfi MCP — how much a move (e.g. CA→TX/FL) saves in state income tax, property tax, estate tax, and cost of living, and whether it's worth it.",
+      "version": "1.0.0",
+      "license": "MIT",
+      "author": {
+        "name": "holdequity",
+        "url": "https://github.com/holdequity"
+      }
     }
   ]
 }
