@@ -19,27 +19,33 @@ No spreadsheets, no signup, no API key. The math — and 150+ years of historica
 
 ## Quick start
 
-Two commands in [Claude Code](https://docs.claude.com/en/docs/claude-code) — add the skills catalog, then connect the MCP that powers it:
+**Fastest — add any single skill with the [skills.sh](https://skills.sh) CLI** (one command, no setup; per-skill commands are in the table below):
+
+```
+npx skills add holdequity/planfi-<name>
+```
+
+**Or add the whole catalog in [Claude Code](https://docs.claude.com/en/docs/claude-code), then connect the MCP that powers it:**
 
 ```
 claude plugin marketplace add KameronKales/planfi-skills
 claude mcp add --transport http planfi https://ai.planfi.app/mcp
 ```
 
-Install any skill from the catalog and just ask. Want only one? Each skill is also its own one-line marketplace: `claude plugin marketplace add holdequity/planfi-<name>`.
+Then just ask.
 
 ## Skills
 
-| Skill | What it does | Install solo |
-|-------|--------------|--------------|
-| **str-investment-analyzer** | Analyze short-term-rental (Airbnb/VRBO) property investments by city: cash flow, cash-on-cash, cap rate, break-even occupancy, risk flag, managed-vs-self comparison, and a hold-period return (or indefinite buy-and-hold). | [`holdequity/planfi-str-analyzer`](https://github.com/holdequity/planfi-str-analyzer) |
-| **financial-forecast** | Build a complete FIRE / financial forecast: net-worth projection, FIRE age, Monte Carlo success rate, insights, action plan, and what-if scenario comparisons. | [`holdequity/planfi-financial-forecast`](https://github.com/holdequity/planfi-financial-forecast) |
-| **rent-vs-buy** | Rent vs buy: breakeven home-appreciation rate (pre & after tax), per-horizon BUY-vs-RENT net worth, payoff/crossover years, and invest-the-difference opportunity cost. | [`holdequity/planfi-rent-vs-buy`](https://github.com/holdequity/planfi-rent-vs-buy) |
-| **tax-optimizer** | Cut taxes across accounts and years: broad tax optimization (asset location, tax-loss harvesting, charitable), multi-year ISO/conversion timing (AMT/NIIT/IRMAA-aware), Roth conversion ladders, mega-backdoor Roth space, and advanced surtaxes (NIIT/AMT/state). | [`holdequity/planfi-tax-optimizer`](https://github.com/holdequity/planfi-tax-optimizer) |
-| **equity-comp-planner** | Value and tax employer equity (RSUs, ISOs, NSOs, ESPP), find the ISO/AMT crossover, and assess single-stock concentration risk with a tax-aware diversification plan. | [`holdequity/planfi-equity-comp-planner`](https://github.com/holdequity/planfi-equity-comp-planner) |
-| **retirement-income** | Plan retirement decumulation: tax-smart withdrawal order, Social Security claiming age, ACA healthcare bridge before Medicare, and estate-tax exposure. | [`holdequity/planfi-retirement-income`](https://github.com/holdequity/planfi-retirement-income) |
-| **debt-and-cashflow** | Pay down debt and route surplus cash optimally: avalanche/snowball debt payoff order, mortgage prepay vs invest, refinance break-even, and a next-best-dollar funding waterfall. | [`holdequity/planfi-debt-and-cashflow`](https://github.com/holdequity/planfi-debt-and-cashflow) |
-| **fire-tracker** | Track FIRE progress: are you already financially independent / can you coast, how you benchmark against peers, which net-worth milestones you've hit, and whether you can hit a target retirement age (with the easiest levers to pull). | [`holdequity/planfi-fire-tracker`](https://github.com/holdequity/planfi-fire-tracker) |
+| Skill | What it does | Install (skills.sh CLI) |
+|-------|--------------|-------------------------|
+| [**str-investment-analyzer**](https://github.com/holdequity/planfi-str-analyzer) | Analyze short-term-rental (Airbnb/VRBO) property investments by city: cash flow, cash-on-cash, cap rate, break-even occupancy, risk flag, managed-vs-self comparison, and a hold-period return (or indefinite buy-and-hold). | `npx skills add holdequity/planfi-str-analyzer` |
+| [**financial-forecast**](https://github.com/holdequity/planfi-financial-forecast) | Build a complete FIRE / financial forecast: net-worth projection, FIRE age, Monte Carlo success rate, insights, action plan, and what-if scenario comparisons. | `npx skills add holdequity/planfi-financial-forecast` |
+| [**rent-vs-buy**](https://github.com/holdequity/planfi-rent-vs-buy) | Rent vs buy: breakeven home-appreciation rate (pre & after tax), per-horizon BUY-vs-RENT net worth, payoff/crossover years, and invest-the-difference opportunity cost. | `npx skills add holdequity/planfi-rent-vs-buy` |
+| [**tax-optimizer**](https://github.com/holdequity/planfi-tax-optimizer) | Cut taxes across accounts and years: broad tax optimization (asset location, tax-loss harvesting, charitable), multi-year ISO/conversion timing (AMT/NIIT/IRMAA-aware), Roth conversion ladders, mega-backdoor Roth space, and advanced surtaxes (NIIT/AMT/state). | `npx skills add holdequity/planfi-tax-optimizer` |
+| [**equity-comp-planner**](https://github.com/holdequity/planfi-equity-comp-planner) | Value and tax employer equity (RSUs, ISOs, NSOs, ESPP), find the ISO/AMT crossover, and assess single-stock concentration risk with a tax-aware diversification plan. | `npx skills add holdequity/planfi-equity-comp-planner` |
+| [**retirement-income**](https://github.com/holdequity/planfi-retirement-income) | Plan retirement decumulation: tax-smart withdrawal order, Social Security claiming age, ACA healthcare bridge before Medicare, and estate-tax exposure. | `npx skills add holdequity/planfi-retirement-income` |
+| [**debt-and-cashflow**](https://github.com/holdequity/planfi-debt-and-cashflow) | Pay down debt and route surplus cash optimally: avalanche/snowball debt payoff order, mortgage prepay vs invest, refinance break-even, and a next-best-dollar funding waterfall. | `npx skills add holdequity/planfi-debt-and-cashflow` |
+| [**fire-tracker**](https://github.com/holdequity/planfi-fire-tracker) | Track FIRE progress: are you already financially independent / can you coast, how you benchmark against peers, which net-worth milestones you've hit, and whether you can hit a target retirement age (with the easiest levers to pull). | `npx skills add holdequity/planfi-fire-tracker` |
 
 ## How it works
 
