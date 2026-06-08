@@ -22,8 +22,8 @@ No spreadsheets, no signup, no API key. The math — and 150+ years of historica
 **Fastest — the [skills.sh](https://skills.sh) CLI** (any agent, no setup). Add this whole catalog (pick a skill, or grab them all), or install just one:
 
 ```
-npx skills add KameronKales/planfi-skills          # choose from all 8
-npx skills add KameronKales/planfi-skills --all    # install all 8
+npx skills add KameronKales/planfi-skills          # choose from all 10
+npx skills add KameronKales/planfi-skills --all    # install all 10
 npx skills add holdequity/planfi-<name>            # just one skill (table below)
 ```
 
