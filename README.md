@@ -16,6 +16,14 @@ No spreadsheets, no signup, no API key. The math — and 150+ years of historica
 - "Are my RSUs too concentrated, and when do my ISOs trigger AMT?"
 - "Is this Airbnb a good investment — cash-on-cash, cap rate, break-even occupancy?"
 - "Am I already financially independent, or how many years until I am?"
+- "Will long-term care wipe out my survivor's plan — should I self-insure or buy an LTC/hybrid policy?"
+- "How much can I safely spend each year — Guyton-Klinger guardrails vs VPW vs a static 4%?"
+- "What's my Lean / Fat / Barista FIRE number, and can part-time income bridge me to full retirement?"
+- "Should I early-exercise and file an 83(b)? Does my startup stock qualify for the QSBS exclusion?"
+- "What's the after-tax return on this rental once I add depreciation, recapture, and a 1031 exchange?"
+- "How big should my emergency fund be, and is rolling my 529 leftovers into a Roth worth it?"
+- "Lease, finance, or pay cash for this car? And should I consolidate my credit-card debt?"
+- "Does a HELOC or reverse mortgage make sense, and how much do I owe in quarterly estimated taxes?"
 
 ## Quick start
 
