@@ -129,6 +129,17 @@
         "name": "holdequity",
         "url": "https://github.com/holdequity"
       }
+    },
+    {
+      "name": "startup-equity-planner",
+      "source": "./skills/startup-equity-planner",
+      "description": "Model the irreversible 30-day 83(b) early-exercise election and the QSBS section 1202 gain exclusion (up to $10M/10x basis) for startup founders, early employees, and C-corp sellers — by orchestrating the public planfi MCP.",
+      "version": "1.0.0",
+      "license": "MIT",
+      "author": {
+        "name": "holdequity",
+        "url": "https://github.com/holdequity"
+      }
     }
   ]
 }

@@ -1,6 +1,6 @@
 # PlanFi Skills — AI personal-finance & FIRE planning for Claude Code
 
-[![Claude Code Agent Skills](https://img.shields.io/badge/Claude%20Code-Agent%20Skills-d97757)](https://docs.claude.com/en/docs/claude-code) [![Powered by MCP](https://img.shields.io/badge/MCP-ai.planfi.app-3b82f6)](https://ai.planfi.app/mcp) [![License: MIT](https://img.shields.io/badge/License-MIT-22c55e.svg)](./LICENSE) ![Skills](https://img.shields.io/badge/skills-11-f59e0b)
+[![Claude Code Agent Skills](https://img.shields.io/badge/Claude%20Code-Agent%20Skills-d97757)](https://docs.claude.com/en/docs/claude-code) [![Powered by MCP](https://img.shields.io/badge/MCP-ai.planfi.app-3b82f6)](https://ai.planfi.app/mcp) [![License: MIT](https://img.shields.io/badge/License-MIT-22c55e.svg)](./LICENSE) ![Skills](https://img.shields.io/badge/skills-12-f59e0b)
 
 **Free, open-source [Claude Code](https://docs.claude.com/en/docs/claude-code) Agent Skills that turn Claude into a personal-finance & FIRE planning analyst.** Ask in plain English and get real numbers back — net-worth projections, your FIRE (financial-independence / retire-early) age, Monte Carlo success rates, tax savings, debt-payoff timelines, rent-vs-buy break-evens, and rental-property returns.
 
@@ -22,8 +22,8 @@ No spreadsheets, no signup, no API key. The math — and 150+ years of historica
 **Fastest — the [skills.sh](https://skills.sh) CLI** (any agent, no setup). Add this whole catalog (pick a skill, or grab them all), or install just one:
 
 ```
-npx skills add KameronKales/planfi-skills          # choose from all 11
-npx skills add KameronKales/planfi-skills --all    # install all 11
+npx skills add KameronKales/planfi-skills          # choose from all 12
+npx skills add KameronKales/planfi-skills --all    # install all 12
 npx skills add holdequity/planfi-<name>            # just one skill (table below)
 ```
 
@@ -51,6 +51,7 @@ Then just ask.
 | [**self-employed-planner**](https://github.com/holdequity/planfi-self-employed-planner) | Plan self-employed / business-owner retirement: max Solo 401(k) vs SEP-IRA vs SIMPLE contribution room, the §199A QBI deduction (thresholds, W-2/UBIA cap, SSTB phaseout), and the S-corp reasonable-salary tradeoff (payroll tax vs QBI vs retirement room). | `npx skills add holdequity/planfi-self-employed-planner` |
 | [**relocation-planner**](https://github.com/holdequity/planfi-relocation-planner) | Compare retirement relocation / state-tax arbitrage by orchestrating the public planfi MCP — how much a move (e.g. CA→TX/FL) saves in state income tax (full 50-state + DC progressive single/MFJ brackets), property tax, estate tax, and cost of living, and whether it's worth it. | `npx skills add holdequity/planfi-relocation-planner` |
 | [**long-term-rental-analyzer**](https://github.com/holdequity/planfi-long-term-rental-analyzer) | Long-term-rental after-tax analyzer: 27.5-yr depreciation shelter, ~25% recapture at sale, 1031 like-kind deferral, and a Schedule E P&L (rent, vacancy, opex, NOI). | `npx skills add holdequity/planfi-long-term-rental-analyzer` |
+| [**startup-equity-planner**](https://github.com/holdequity/planfi-startup-equity-planner) | Model the irreversible 30-day 83(b) early-exercise election and the QSBS section 1202 gain exclusion (up to $10M/10x basis) for startup founders, early employees, and C-corp sellers — by orchestrating the public planfi MCP. | `npx skills add holdequity/planfi-startup-equity-planner` |
 
 ## How it works
 
