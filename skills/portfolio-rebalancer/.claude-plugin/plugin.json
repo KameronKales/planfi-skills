@@ -1,0 +1,13 @@
+{
+  "name": "portfolio-rebalancer",
+  "version": "1.0.0",
+  "description": "Cross-account rebalance trade generator — tax-aware buy/sell lists to return to your IPS target allocation",
+  "license": "MIT",
+  "author": {
+    "name": "holdequity",
+    "url": "https://planfi.app"
+  },
+  "homepage": "https://github.com/holdequity/planfi-portfolio-rebalancer",
+  "repository": "https://github.com/holdequity/planfi-portfolio-rebalancer",
+  "keywords": []
+}
