@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "planfi skills — financial planning and real-estate investment analysis powered by the public planfi MCP.",
-    "version": "1.4.0"
+    "version": "1.5.0"
   },
   "plugins": [
     {
@@ -145,6 +145,17 @@
       "name": "portfolio-rebalancer",
       "source": "./skills/portfolio-rebalancer",
       "description": "Cross-account, tax-aware rebalance trade generator: takes holdings across taxable / traditional IRA / Roth / 401(k) plus an IPS target allocation, detects drift beyond the rebalancing band, and returns the actual buy/sell trade list to return to target — rebalancing tax-advantaged accounts first (zero gain realized), avoiding short-term gains in taxable, harvesting loss lots within the wash-sale ±30-day window, and routing new contributions to underweight classes before selling. Thin orchestration over the planfi MCP.",
+      "version": "1.0.0",
+      "license": "MIT",
+      "author": {
+        "name": "holdequity",
+        "url": "https://github.com/holdequity"
+      }
+    },
+    {
+      "name": "comprehensive-plan",
+      "source": "./skills/comprehensive-plan",
+      "description": "One comprehensive financial plan in a single deliverable — retirement/FIRE projection with Monte Carlo backtesting, 529 college funding status, estate-tax exposure, and life/disability insurance protection gaps, every number engine-computed.",
       "version": "1.0.0",
       "license": "MIT",
       "author": {
