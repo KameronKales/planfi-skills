@@ -47,6 +47,7 @@ No spreadsheets, no signup, no API key. The math — and 150+ years of historica
 - "How big should my emergency fund be, and is rolling my 529 leftovers into a Roth worth it?"
 - "Lease, finance, or pay cash for this car? And should I consolidate my credit-card debt?"
 - "Does a HELOC or reverse mortgage make sense, and how much do I owe in quarterly estimated taxes?"
+- "Most of my income came late — a Q4 RSU vest / a year-end S-corp distribution — do I really have to pay even quarterly estimates, or can I annualize (Form 2210 Schedule AI) to defer them without an underpayment penalty?"
 - "What's my take-home pay on $120k after 401k, HSA, and taxes — and how much free cash do I have to invest each month?"
 - "What's my real savings rate, and am I overspending vs the 50/30/20 rule?"
 
