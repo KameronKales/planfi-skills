@@ -24,6 +24,7 @@ No spreadsheets, no signup, no API key. The math — and 150+ years of historica
 - "I'm retiring with $600k of appreciated company stock in my 401(k) — should I elect NUA or roll it to an IRA?"
 - "We're divorcing — how do we QDRO-split a $400k 401(k), a $100k Roth, and a $300k brokerage 50/50, what's the equalizing cash payment after tax, and can I claim my ex's Social Security?"
 - "Is this Airbnb a good investment — cash-on-cash, cap rate, break-even occupancy?"
+- "My Airbnb averages a 4-night stay and I logged 180 hours — can I write off the $120k cost-seg loss against my $300k W-2, and what's the depreciation recapture when I sell?"
 - "Am I already financially independent, or how many years until I am?"
 - "We're a PA family with a $1M estate — how much inheritance tax will our kids owe, and would moving change it?"
 - "Will long-term care wipe out my survivor's plan — should I self-insure or buy an LTC/hybrid policy?"
