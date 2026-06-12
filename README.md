@@ -40,6 +40,7 @@ No spreadsheets, no signup, no API key. The math — and 150+ years of historica
 - "Should I defer $200k of my bonus into my employer's 409A plan and take it over 10 years in early retirement — and how does that compare to taking it now?"
 - "Is deferring my comp worth the creditor risk if my employer's credit rating is shaky — and would a lump or 10-year installment dodge the IRMAA cliffs?"
 - "What's the after-tax return on this rental once I add depreciation, recapture, and a 1031 exchange?"
+- "Should I do a cost segregation study on my $1M rental — how much depreciation can I front-load with bonus this year, and what's the §1245/§1250 recapture when I sell?"
 - "Two kids in undergrad, $130k income, $12k tuition each — how do I maximize the American Opportunity Credit and should I keep $4k out of the 529?"
 - "AOTC vs Lifetime Learning Credit for my grad-school tuition — which one gives me the bigger education tax credit, and how much is refundable?"
 - "What's my FAFSA Student Aid Index? $120k income, $40k in a brokerage, one kid in college — and would a grandparent-owned 529 or a Roth conversion this year change our need-based aid?"
