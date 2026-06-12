@@ -173,6 +173,17 @@
         "name": "holdequity",
         "url": "https://github.com/holdequity"
       }
+    },
+    {
+      "name": "divorce-financial-planning",
+      "source": "./skills/divorce-financial-planning",
+      "description": "Model the financial split of a divorcing household — QDRO division of 401k/pension/IRA, after-tax equalization of Roth vs traditional vs taxable awards, the equalizing cash payment, pension present-value split, home buyout vs §121-split sale, post-2019 alimony after-tax cost, MFJ→single bracket shift, and divorced-spouse Social Security (10-year rule) eligibility.",
+      "version": "1.0.0",
+      "license": "MIT",
+      "author": {
+        "name": "holdequity",
+        "url": "https://github.com/holdequity"
+      }
     }
   ]
 }
