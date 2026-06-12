@@ -17,6 +17,7 @@ No spreadsheets, no signup, no API key. The math — and 150+ years of historica
 - "Ladder $40k/yr of safe cash across brokered CDs and I-Bonds for 5 years — what's the blended yield and tax hit?"
 - "Avalanche or snowball — and should I prepay my mortgage or invest the cash?"
 - "Are my RSUs too concentrated, and when do my ISOs trigger AMT?"
+- "I'm retiring with $600k of appreciated company stock in my 401(k) — should I elect NUA or roll it to an IRA?"
 - "Is this Airbnb a good investment — cash-on-cash, cap rate, break-even occupancy?"
 - "Am I already financially independent, or how many years until I am?"
 - "We're a PA family with a $1M estate — how much inheritance tax will our kids owe, and would moving change it?"
