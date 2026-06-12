@@ -38,6 +38,7 @@ No spreadsheets, no signup, no API key. The math — and 150+ years of historica
 - "What's the after-tax return on this rental once I add depreciation, recapture, and a 1031 exchange?"
 - "Two kids in undergrad, $130k income, $12k tuition each — how do I maximize the American Opportunity Credit and should I keep $4k out of the 529?"
 - "AOTC vs Lifetime Learning Credit for my grad-school tuition — which one gives me the bigger education tax credit, and how much is refundable?"
+- "What's my FAFSA Student Aid Index? $120k income, $40k in a brokerage, one kid in college — and would a grandparent-owned 529 or a Roth conversion this year change our need-based aid?"
 - "How big should my emergency fund be, and is rolling my 529 leftovers into a Roth worth it?"
 - "Lease, finance, or pay cash for this car? And should I consolidate my credit-card debt?"
 - "Does a HELOC or reverse mortgage make sense, and how much do I owe in quarterly estimated taxes?"
