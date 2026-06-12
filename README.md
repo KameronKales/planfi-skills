@@ -1,6 +1,6 @@
 # PlanFi Skills — AI personal-finance & FIRE planning for Claude Code
 
-[![Claude Code Agent Skills](https://img.shields.io/badge/Claude%20Code-Agent%20Skills-d97757)](https://docs.claude.com/en/docs/claude-code) [![Powered by MCP](https://img.shields.io/badge/MCP-ai.planfi.app-3b82f6)](https://ai.planfi.app/mcp) [![License: MIT](https://img.shields.io/badge/License-MIT-22c55e.svg)](./LICENSE) ![Skills](https://img.shields.io/badge/skills-14-f59e0b)
+[![Claude Code Agent Skills](https://img.shields.io/badge/Claude%20Code-Agent%20Skills-d97757)](https://docs.claude.com/en/docs/claude-code) [![Powered by MCP](https://img.shields.io/badge/MCP-ai.planfi.app-3b82f6)](https://ai.planfi.app/mcp) [![License: MIT](https://img.shields.io/badge/License-MIT-22c55e.svg)](./LICENSE) ![Skills](https://img.shields.io/badge/skills-15-f59e0b)
 
 **Free, open-source [Claude Code](https://docs.claude.com/en/docs/claude-code) Agent Skills that turn Claude into a personal-finance & FIRE planning analyst.** Ask in plain English and get real numbers back — net-worth projections, your FIRE (financial-independence / retire-early) age, Monte Carlo success rates, tax savings, debt-payoff timelines, rent-vs-buy break-evens, and rental-property returns.
 
@@ -28,6 +28,8 @@ No spreadsheets, no signup, no API key. The math — and 150+ years of historica
 - "How much Roth conversion room do I have before RMDs hit at 73, and will my RMDs trigger a Medicare IRMAA surcharge?"
 - "What's my Lean / Fat / Barista FIRE number, and can part-time income bridge me to full retirement?"
 - "Should I early-exercise and file an 83(b)? Does my startup stock qualify for the QSBS exclusion?"
+- "Should I defer $200k of my bonus into my employer's 409A plan and take it over 10 years in early retirement — and how does that compare to taking it now?"
+- "Is deferring my comp worth the creditor risk if my employer's credit rating is shaky — and would a lump or 10-year installment dodge the IRMAA cliffs?"
 - "What's the after-tax return on this rental once I add depreciation, recapture, and a 1031 exchange?"
 - "How big should my emergency fund be, and is rolling my 529 leftovers into a Roth worth it?"
 - "Lease, finance, or pay cash for this car? And should I consolidate my credit-card debt?"
@@ -38,8 +40,8 @@ No spreadsheets, no signup, no API key. The math — and 150+ years of historica
 **Fastest — the [skills.sh](https://skills.sh) CLI** (any agent, no setup). Add this whole catalog (pick a skill, or grab them all), or install just one:
 
 ```
-npx skills add KameronKales/planfi-skills          # choose from all 14
-npx skills add KameronKales/planfi-skills --all    # install all 14
+npx skills add KameronKales/planfi-skills          # choose from all 15
+npx skills add KameronKales/planfi-skills --all    # install all 15
 npx skills add holdequity/planfi-<name>            # just one skill (table below)
 ```
 
@@ -70,6 +72,7 @@ Then just ask.
 | [**startup-equity-planner**](https://github.com/holdequity/planfi-startup-equity-planner) | Model the irreversible 30-day 83(b) early-exercise election and the QSBS section 1202 gain exclusion (up to $10M/10x basis) for startup founders, early employees, and C-corp sellers — by orchestrating the public planfi MCP. | `npx skills add holdequity/planfi-startup-equity-planner` |
 | [**portfolio-rebalancer**](https://github.com/holdequity/planfi-portfolio-rebalancer) | Cross-account, tax-aware rebalance trade generator: takes holdings across taxable / traditional IRA / Roth / 401(k) plus an IPS target allocation, detects drift beyond the rebalancing band, and returns the actual buy/sell trade list to return to target — rebalancing tax-advantaged accounts first (zero gain realized), avoiding short-term gains in taxable, harvesting loss lots within the wash-sale ±30-day window, and routing new contributions to underweight classes before selling. | `npx skills add holdequity/planfi-portfolio-rebalancer` |
 | [**comprehensive-plan**](https://github.com/holdequity/planfi-comprehensive-plan) | One comprehensive financial plan in a single deliverable — retirement/FIRE projection with Monte Carlo backtesting, 529 college funding status, estate-tax exposure, and life/disability insurance protection gaps, every number engine-computed. | `npx skills add holdequity/planfi-comprehensive-plan` |
+| [**deferred-comp**](https://github.com/holdequity/planfi-deferred-comp) | Model nonqualified deferred comp (NQDC / 409A) elections for high-W2 execs — defer-now-vs-take-now, lump-vs-installment distribution, and bracket/IRMAA/NIIT/additional-Medicare smoothing into low-income FIRE bridge years, with employer unsecured-creditor risk. | `npx skills add holdequity/planfi-deferred-comp` |
 
 ## How it works
 

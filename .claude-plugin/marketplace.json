@@ -162,6 +162,17 @@
         "name": "holdequity",
         "url": "https://github.com/holdequity"
       }
+    },
+    {
+      "name": "deferred-comp",
+      "source": "./skills/deferred-comp",
+      "description": "Model nonqualified deferred comp (NQDC / 409A) elections for high-W2 execs — defer-now-vs-take-now, lump-vs-installment distribution, and bracket/IRMAA/NIIT/additional-Medicare smoothing into low-income FIRE bridge years, with employer unsecured-creditor risk. Thin orchestration over the planfi MCP.",
+      "version": "1.0.0",
+      "license": "MIT",
+      "author": {
+        "name": "holdequity",
+        "url": "https://github.com/holdequity"
+      }
     }
   ]
 }
