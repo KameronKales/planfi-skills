@@ -14,6 +14,7 @@ No spreadsheets, no signup, no API key. The math — and 150+ years of historica
 - "Should I rent or buy a $500k house — what appreciation rate makes buying win?"
 - "How do I cut my taxes — Roth conversions, mega-backdoor Roth, tax-loss harvesting?"
 - "Should I bunch two years of donations into a donor-advised fund and give appreciated stock instead of cash to dodge capital gains?"
+- "I have a $400k capital gain from selling stock — should I roll it into an Opportunity Zone fund, and how much tax does the 10-year hold eliminate?"
 - "I'm selling 100 of my 8 tax lots of NVDA — which lots should I sell (HIFO vs FIFO) to minimize the gain, and can I harvest a crypto loss and rebuy it immediately?"
 - "When should I claim Social Security, and how do I bridge healthcare before Medicare?"
 - "I'm turning 65 and still working — do I have to enroll in Medicare, and what's the late-enrollment penalty if I wait (and does COBRA count as creditable coverage)?"
