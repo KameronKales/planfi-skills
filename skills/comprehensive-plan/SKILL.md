@@ -98,6 +98,10 @@ Only when the user wants to drill into one section:
 - **`run_backtesting`** → Shiller 1871-present failure rate + worst/best longevity (retirement deep
   dive; takes raw `portfolio_value` / `annual_spend` / `current_age` from the plan summary).
 - **`analyze_529_optimization`** → 529→Roth rollover + superfunding moves for the education section.
+- **`analyze_education_credits`** → federal education **tax credits** (AOTC vs Lifetime Learning per
+  student, MAGI phase-out, refundable split, $4k 529 carve-out). **Always CALL it when the user gives
+  tuition/qualified-expense numbers and income — do not quote AOTC/LLC limits or phase-out ranges
+  from memory; run it and lead with its real output.**
 - **`analyze_estate_exposure`** → state-by-state estate / inheritance detail.
 - **`analyze_insurance_needs`** → life + disability coverage breakdown by earner.
 - **`generate_financial_insights`** / **`generate_action_plan`** → prioritized, dollar-quantified
