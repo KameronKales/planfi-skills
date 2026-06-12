@@ -15,6 +15,7 @@ No spreadsheets, no signup, no API key. The math — and 150+ years of historica
 - "How do I cut my taxes — Roth conversions, mega-backdoor Roth, tax-loss harvesting?"
 - "Should I bunch two years of donations into a donor-advised fund and give appreciated stock instead of cash to dodge capital gains?"
 - "When should I claim Social Security, and how do I bridge healthcare before Medicare?"
+- "If I became disabled, how much would SSDI pay me, would my group LTD plus SSDI replace enough of my paycheck, and would the benefit be taxed?"
 - "Should I take my pension as a $350k lump sum or $2,000/mo for life — and is the 100% survivor option worth the reduced check?"
 - "Ladder $40k/yr of safe cash across brokered CDs and I-Bonds for 5 years — what's the blended yield and tax hit?"
 - "Avalanche or snowball — and should I prepay my mortgage or invest the cash?"
