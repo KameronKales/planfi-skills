@@ -20,6 +20,7 @@ No spreadsheets, no signup, no API key. The math — and 150+ years of historica
 - "If I became disabled, how much would SSDI pay me, would my group LTD plus SSDI replace enough of my paycheck, and would the benefit be taxed?"
 - "Should I take my pension as a $350k lump sum or $2,000/mo for life — and is the 100% survivor option worth the reduced check?"
 - "Ladder $40k/yr of safe cash across brokered CDs and I-Bonds for 5 years — what's the blended yield and tax hit?"
+- "Build me an I-bond ladder — how much can my spouse and I buy a year under the $10k TreasuryDirect cap, what's my early-redemption penalty if I cash out at year 3, and are I-bonds or TIPS better after tax?"
 - "Avalanche or snowball — and should I prepay my mortgage or invest the cash?"
 - "Are my RSUs too concentrated, and when do my ISOs trigger AMT?"
 - "I'm retiring with $600k of appreciated company stock in my 401(k) — should I elect NUA or roll it to an IRA?"
