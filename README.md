@@ -1,6 +1,6 @@
 # PlanFi Skills — AI personal-finance & FIRE planning for Claude Code
 
-[![Claude Code Agent Skills](https://img.shields.io/badge/Claude%20Code-Agent%20Skills-d97757)](https://docs.claude.com/en/docs/claude-code) [![Powered by MCP](https://img.shields.io/badge/MCP-ai.planfi.app-3b82f6)](https://ai.planfi.app/mcp) [![License: MIT](https://img.shields.io/badge/License-MIT-22c55e.svg)](./LICENSE) ![Skills](https://img.shields.io/badge/skills-16-f59e0b)
+[![Claude Code Agent Skills](https://img.shields.io/badge/Claude%20Code-Agent%20Skills-d97757)](https://docs.claude.com/en/docs/claude-code) [![Powered by MCP](https://img.shields.io/badge/MCP-ai.planfi.app-3b82f6)](https://ai.planfi.app/mcp) [![License: MIT](https://img.shields.io/badge/License-MIT-22c55e.svg)](./LICENSE) ![Skills](https://img.shields.io/badge/skills-17-f59e0b)
 
 **Free, open-source [Claude Code](https://docs.claude.com/en/docs/claude-code) Agent Skills that turn Claude into a personal-finance & FIRE planning analyst.** Ask in plain English and get real numbers back — net-worth projections, your FIRE (financial-independence / retire-early) age, Monte Carlo success rates, tax savings, debt-payoff timelines, rent-vs-buy break-evens, and rental-property returns.
 
@@ -41,6 +41,8 @@ No spreadsheets, no signup, no API key. The math — and 150+ years of historica
 - "What's my Lean / Fat / Barista FIRE number, and can part-time income bridge me to full retirement?"
 - "Should I early-exercise and file an 83(b)? Does my startup stock qualify for the QSBS exclusion?"
 - "Should I defer $200k of my bonus into my employer's 409A plan and take it over 10 years in early retirement — and how does that compare to taking it now?"
+- "Will converting $40k to Roth push more of my Social Security into the 85% taxable zone — what's my real marginal rate, and how much can I convert before the tax torpedo fires?"
+- "Why is my marginal rate 40%+ when I'm only in the 22% bracket, and how much worse does the SS tax torpedo get for my spouse if she's widowed and files single?"
 - "Is deferring my comp worth the creditor risk if my employer's credit rating is shaky — and would a lump or 10-year installment dodge the IRMAA cliffs?"
 - "What's the after-tax return on this rental once I add depreciation, recapture, and a 1031 exchange?"
 - "Should I do a cost segregation study on my $1M rental — how much depreciation can I front-load with bonus this year, and what's the §1245/§1250 recapture when I sell?"
@@ -60,8 +62,8 @@ No spreadsheets, no signup, no API key. The math — and 150+ years of historica
 **Fastest — the [skills.sh](https://skills.sh) CLI** (any agent, no setup). Add this whole catalog (pick a skill, or grab them all), or install just one:
 
 ```
-npx skills add KameronKales/planfi-skills          # choose from all 16
-npx skills add KameronKales/planfi-skills --all    # install all 16
+npx skills add KameronKales/planfi-skills          # choose from all 17
+npx skills add KameronKales/planfi-skills --all    # install all 17
 npx skills add holdequity/planfi-<name>            # just one skill (table below)
 ```
 
@@ -94,6 +96,7 @@ Then just ask.
 | [**comprehensive-plan**](https://github.com/holdequity/planfi-comprehensive-plan) | One comprehensive financial plan in a single deliverable — retirement/FIRE projection with Monte Carlo backtesting, 529 college funding status, estate-tax exposure, and life/disability insurance protection gaps, every number engine-computed. | `npx skills add holdequity/planfi-comprehensive-plan` |
 | [**deferred-comp**](https://github.com/holdequity/planfi-deferred-comp) | Model nonqualified deferred comp (NQDC / 409A) elections for high-W2 execs — defer-now-vs-take-now, lump-vs-installment distribution, and bracket/IRMAA/NIIT/additional-Medicare smoothing into low-income FIRE bridge years, with employer unsecured-creditor risk. | `npx skills add holdequity/planfi-deferred-comp` |
 | [**divorce-financial-planning**](https://github.com/holdequity/planfi-divorce-financial-planning) | Model the financial split of a divorcing household — QDRO division of 401k/pension/IRA, after-tax equalization of Roth vs traditional vs taxable awards, the equalizing cash payment, pension present-value split, home buyout vs §121-split sale, post-2019 alimony after-tax cost, MFJ→single bracket shift, and divorced-spouse Social Security (10-year rule) eligibility. | `npx skills add holdequity/planfi-divorce-financial-planning` |
+| [**ss-tax-torpedo**](https://github.com/holdequity/planfi-ss-tax-torpedo) | Model the Social Security provisional-income tax torpedo and survivor single-filer cliffs | `npx skills add holdequity/planfi-ss-tax-torpedo` |
 
 ## How it works
 

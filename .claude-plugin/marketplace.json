@@ -184,6 +184,17 @@
         "name": "holdequity",
         "url": "https://github.com/holdequity"
       }
+    },
+    {
+      "name": "ss-tax-torpedo",
+      "source": "./skills/ss-tax-torpedo",
+      "description": "Model the Social Security provisional-income tax torpedo and survivor single-filer cliffs",
+      "version": "1.0.0",
+      "license": "MIT",
+      "author": {
+        "name": "holdequity",
+        "url": "https://github.com/holdequity"
+      }
     }
   ]
 }
