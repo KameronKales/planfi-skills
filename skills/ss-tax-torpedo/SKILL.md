@@ -1,12 +1,12 @@
 ---
 name: ss-tax-torpedo
-version: 1.0.0
+version: 1.0.1
 description: Model the Social Security provisional-income tax torpedo and survivor single-filer cliffs
 ---
 
 # ss-tax-torpedo
 
-A thin orchestration layer over the **planfi MCP** (https://ai.planfi.app/mcp, public, no auth).
+A thin orchestration layer over the **planfi MCP** (https://ai.planfi.app/mcp).
 All math + financial logic live server-side. This skill only gathers inputs and calls the tools —
 it does **not** compute anything locally, carries no business logic, math, or defaults, and is
 read-only (it never changes the user's data). The server is the source of truth.
@@ -25,7 +25,10 @@ If they're NOT available, tell the user to connect the MCP, then continue:
 claude mcp add --transport http planfi https://ai.planfi.app/mcp
 ```
 
-(On claude.ai: add a custom connector pointing at https://ai.planfi.app/mcp — no auth.)
+(On claude.ai: add a custom connector pointing at https://ai.planfi.app/mcp.)
+
+> **Access — free for personal use.** The planfi MCP is free to try (a small monthly allowance, no key needed). Heavy automated abuse forced us to add limits — but it stays **free for personal use**: email **kam@rateapi.dev** and we'll send you a free API key, no charge. (Companies and commercial use have paid plans.) To use a key, pass it as an `Authorization: Bearer pft_…` header in your MCP client config.
+
 
 ## Step 1 — Gather inputs (prefer a `plan_id`)
 

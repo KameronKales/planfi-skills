@@ -1,12 +1,12 @@
 ---
 name: deferred-comp
-version: 1.0.0
+version: 1.0.1
 description: Model nonqualified deferred comp (NQDC / 409A) elections for high-W2 execs and profitable S/C-corp owner-operators — defer-now-vs-take-now, lump-vs-installment distribution, and bracket / Medicare IRMAA / NIIT / Additional-Medicare smoothing into low-income FIRE bridge years, with employer unsecured-creditor risk. Use whenever someone asks "should I defer my bonus", "NQDC lump vs installment", "defer salary past my 401(k) cap", "what's the creditor risk of my deferred comp", "409A election — defer now or take now?", or "smooth my NQDC payouts to avoid IRMAA". Thin orchestration over the planfi MCP.
 ---
 
 # Deferred Comp (NQDC / 409A) Election Analyzer
 
-A thin orchestration layer over the **planfi MCP** (https://ai.planfi.app/mcp, public, no auth).
+A thin orchestration layer over the **planfi MCP** (https://ai.planfi.app/mcp).
 All deferral economics, election-year tax, distribution-year bracket / IRMAA smoothing, and
 creditor-risk math live server-side. This skill only gathers inputs and calls the tools — it does
 **not** compute anything locally, carries no defaults of its own, and is read-only.
@@ -31,7 +31,10 @@ If they're NOT available, tell the user to connect the MCP, then continue:
 claude mcp add --transport http planfi https://ai.planfi.app/mcp
 ```
 
-(On claude.ai: add a custom connector pointing at https://ai.planfi.app/mcp — no auth.)
+(On claude.ai: add a custom connector pointing at https://ai.planfi.app/mcp.)
+
+> **Access — free for personal use.** The planfi MCP is free to try (a small monthly allowance, no key needed). Heavy automated abuse forced us to add limits — but it stays **free for personal use**: email **kam@rateapi.dev** and we'll send you a free API key, no charge. (Companies and commercial use have paid plans.) To use a key, pass it as an `Authorization: Bearer pft_…` header in your MCP client config.
+
 
 ## Step 1 — (Optional) build a plan first to chain context + get a share link
 

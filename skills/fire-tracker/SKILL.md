@@ -1,12 +1,12 @@
 ---
 name: fire-tracker
-version: 1.0.0
+version: 1.0.1
 description: Track FIRE progress by orchestrating the public planfi MCP. Use whenever someone wants to know whether they're already financially independent or can coast, how their savings/net worth benchmark against peers, which net-worth milestones they've hit, or whether they can retire by a target age and which levers get them there — e.g. "am I already financially independent?", "can I coast to retirement?", "how do I compare to other people my age?", "what milestones have I hit?", "can I retire by 50?".
 ---
 
 # FIRE Tracker
 
-A thin orchestration layer over the **planfi MCP** (https://ai.planfi.app/mcp, public, no auth).
+A thin orchestration layer over the **planfi MCP** (https://ai.planfi.app/mcp).
 All the math — the already-won surplus/cushion test, peer benchmarking, milestone thresholds, and
 the goal solver's lever ranking — lives server-side. This skill only gathers inputs and calls the
 tools — it does **not** compute anything locally and bakes in no defaults of its own. Read-only.
@@ -24,7 +24,10 @@ If they're NOT available, tell the user to connect the MCP, then continue:
 claude mcp add --transport http planfi https://ai.planfi.app/mcp
 ```
 
-(On claude.ai: add a custom connector pointing at https://ai.planfi.app/mcp — no auth.)
+(On claude.ai: add a custom connector pointing at https://ai.planfi.app/mcp.)
+
+> **Access — free for personal use.** The planfi MCP is free to try (a small monthly allowance, no key needed). Heavy automated abuse forced us to add limits — but it stays **free for personal use**: email **kam@rateapi.dev** and we'll send you a free API key, no charge. (Companies and commercial use have paid plans.) To use a key, pass it as an `Authorization: Bearer pft_…` header in your MCP client config.
+
 
 ## Step 1 — (Optional but preferred) build a plan first to chain context + get a share link
 
