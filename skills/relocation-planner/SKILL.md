@@ -1,12 +1,12 @@
 ---
 name: relocation-planner
-version: 1.2.1
+version: 1.2.2
 description: Compare retirement relocation / state-tax arbitrage by orchestrating the public planfi MCP — how much a move (e.g. CA→TX/FL) saves in state income tax, property tax, estate tax, and cost of living — plus model the messy transition year you actually move in (part-year-resident apportionment, source-based wage/equity sourcing, the resident-state credit for taxes paid to the other state, reciprocity, and the 183-day residency test).
 ---
 
 # relocation-planner
 
-A thin orchestration layer over the **planfi MCP** (https://ai.planfi.app/mcp).
+A thin orchestration layer over the **planfi MCP** (https://ai.planfi.app/mcp/free).
 All math + financial logic live server-side. This skill only gathers inputs and calls the tools —
 it does **not** compute anything locally, carries no business logic, math, or defaults, and is
 read-only (it never changes the user's data). The server is the source of truth.
@@ -20,10 +20,12 @@ Use whichever name your environment exposes (bare or `mcp__planfi__`-prefixed); 
 If they're NOT available, tell the user to connect the MCP, then continue:
 
 ```
-claude mcp add --transport http planfi https://ai.planfi.app/mcp
+claude mcp add --transport http planfi https://ai.planfi.app/mcp/free
 ```
 
-(On claude.ai: add a custom connector pointing at https://ai.planfi.app/mcp.)
+> **Try free, then add your key.** The command above adds the **free** connector — `https://ai.planfi.app/mcp/free` (no key needed). Once you create an API key, add a **new** connector with the MCP url — `https://ai.planfi.app/mcp` — and authorize it with your key.
+
+(On claude.ai: add a custom connector pointing at https://ai.planfi.app/mcp/free.)
 
 > **Access — free for personal use.** The planfi MCP is free to try (a small monthly allowance, no key needed). Heavy automated abuse forced us to add limits — but it stays **free for personal use**: email **kam@rateapi.dev** and we'll send you a free API key, no charge. (Companies and commercial use have paid plans.) To use a key, pass it as an `Authorization: Bearer pft_…` header in your MCP client config.
 

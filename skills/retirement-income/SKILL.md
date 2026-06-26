@@ -1,12 +1,12 @@
 ---
 name: retirement-income
-version: 1.7.1
+version: 1.7.2
 description: Plan retirement decumulation by orchestrating the public planfi MCP. Use whenever someone is at or near retirement and wants to know what order to draw down their accounts, when to claim Social Security, how to bridge health insurance before Medicare at 65, whether they have estate-tax exposure, how to build a guaranteed bond/TIPS income floor for the first N years (sequence-of-returns protection), or how to handle long-term-care cost exposure (self-insure vs an LTC/hybrid policy, and the hit to a surviving spouse) — e.g. "what's the tax-smart drawdown order for my taxable / traditional / Roth accounts?", "when should I claim Social Security?", "what will ACA coverage cost me until 65 if I retire early?", "will my estate owe federal estate tax?", "can I build a Treasury/TIPS ladder to floor my first 10 years of spending?", "will long-term care wipe out my survivor's plan? should I self-insure or buy an LTC/hybrid policy?".
 ---
 
 # Retirement Income
 
-A thin orchestration layer over the **planfi MCP** (https://ai.planfi.app/mcp).
+A thin orchestration layer over the **planfi MCP** (https://ai.planfi.app/mcp/free).
 All decumulation math — withdrawal sequencing, RMD timing, Social Security actuarial breakeven, ACA
 subsidy cliffs, and estate-tax exemption logic — lives server-side. This skill only gathers inputs
 and calls the tools — it does **not** compute anything locally and bakes in no defaults of its own.
@@ -24,10 +24,12 @@ below they are written bare.
 If they're NOT available, tell the user to connect the MCP, then continue:
 
 ```
-claude mcp add --transport http planfi https://ai.planfi.app/mcp
+claude mcp add --transport http planfi https://ai.planfi.app/mcp/free
 ```
 
-(On claude.ai: add a custom connector pointing at https://ai.planfi.app/mcp.)
+> **Try free, then add your key.** The command above adds the **free** connector — `https://ai.planfi.app/mcp/free` (no key needed). Once you create an API key, add a **new** connector with the MCP url — `https://ai.planfi.app/mcp` — and authorize it with your key.
+
+(On claude.ai: add a custom connector pointing at https://ai.planfi.app/mcp/free.)
 
 > **Access — free for personal use.** The planfi MCP is free to try (a small monthly allowance, no key needed). Heavy automated abuse forced us to add limits — but it stays **free for personal use**: email **kam@rateapi.dev** and we'll send you a free API key, no charge. (Companies and commercial use have paid plans.) To use a key, pass it as an `Authorization: Bearer pft_…` header in your MCP client config.
 

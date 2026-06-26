@@ -1,12 +1,12 @@
 ---
 name: startup-equity-planner
-version: 1.0.1
+version: 1.0.2
 description: Model the two highest-leverage pre-IPO/startup equity moves — the irreversible 30-day 83(b) early-exercise election and the §1202 QSBS gain exclusion (up to $10M legacy / $15M OBBBA, or 10× basis) — by orchestrating the public planfi MCP. Use whenever a startup founder, early employee, pre-IPO equity holder, or C-corp business seller wants to decide whether to file an 83(b) election, see the ordinary-to-LTCG conversion and holding-clock start, or estimate how much sale gain QSBS can exclude — e.g. "I'm a founder with 1,000,000 shares at a $0.001 strike, should I file an 83(b)?", "how much of my $30M exit is excluded under QSBS if I held 5 years?", "is the 83(b) worth it on 40,000 NSOs, strike $1, FMV $5, selling at $25?".
 ---
 
 # Startup Equity Planner
 
-A thin orchestration layer over the **planfi MCP** (https://ai.planfi.app/mcp).
+A thin orchestration layer over the **planfi MCP** (https://ai.planfi.app/mcp/free).
 All 83(b), AMT, QSBS §1202, and federal/NIIT/state tax math live server-side. This skill only
 gathers inputs and calls the tools — it does **not** compute anything locally and bakes in no
 thresholds, caps, or defaults of its own. Read-only.
@@ -24,10 +24,12 @@ environment exposes (bare or `mcp__planfi__`-prefixed); below they are written b
 If they're NOT available, tell the user to connect the MCP, then continue:
 
 ```
-claude mcp add --transport http planfi https://ai.planfi.app/mcp
+claude mcp add --transport http planfi https://ai.planfi.app/mcp/free
 ```
 
-(On claude.ai: add a custom connector pointing at https://ai.planfi.app/mcp.)
+> **Try free, then add your key.** The command above adds the **free** connector — `https://ai.planfi.app/mcp/free` (no key needed). Once you create an API key, add a **new** connector with the MCP url — `https://ai.planfi.app/mcp` — and authorize it with your key.
+
+(On claude.ai: add a custom connector pointing at https://ai.planfi.app/mcp/free.)
 
 > **Access — free for personal use.** The planfi MCP is free to try (a small monthly allowance, no key needed). Heavy automated abuse forced us to add limits — but it stays **free for personal use**: email **kam@rateapi.dev** and we'll send you a free API key, no charge. (Companies and commercial use have paid plans.) To use a key, pass it as an `Authorization: Bearer pft_…` header in your MCP client config.
 

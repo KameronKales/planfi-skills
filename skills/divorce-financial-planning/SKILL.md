@@ -1,12 +1,12 @@
 ---
 name: divorce-financial-planning
-version: 1.0.1
+version: 1.0.2
 description: Model the financial split of a divorcing household — QDRO division of 401k/pension/IRA, after-tax equalization of Roth vs traditional vs taxable awards, the equalizing cash payment, pension present-value split, home buyout vs §121-split sale, post-2019 alimony after-tax cost, MFJ→single bracket shift, and divorced-spouse Social Security (10-year rule) eligibility. Use whenever someone is dividing assets in a divorce — e.g. "how do we split our 401k in a divorce", "QDRO division of my pension", "who keeps the house, buyout vs sell", "what's the equalizing payment for a 50/50 split", "can I claim my ex's Social Security".
 ---
 
 # Divorce Financial Planning
 
-A thin orchestration layer over the **planfi MCP** (https://ai.planfi.app/mcp).
+A thin orchestration layer over the **planfi MCP** (https://ai.planfi.app/mcp/free).
 All math + financial logic live server-side. This skill only gathers inputs and calls the tools —
 it does **not** compute anything locally, carries no business logic, math, or defaults, and is
 read-only (it never changes the user's data). The server is the source of truth.
@@ -28,10 +28,12 @@ Use whichever name your environment exposes (bare or `mcp__planfi__`-prefixed); 
 If they're NOT available, tell the user to connect the MCP, then continue:
 
 ```
-claude mcp add --transport http planfi https://ai.planfi.app/mcp
+claude mcp add --transport http planfi https://ai.planfi.app/mcp/free
 ```
 
-(On claude.ai: add a custom connector pointing at https://ai.planfi.app/mcp.)
+> **Try free, then add your key.** The command above adds the **free** connector — `https://ai.planfi.app/mcp/free` (no key needed). Once you create an API key, add a **new** connector with the MCP url — `https://ai.planfi.app/mcp` — and authorize it with your key.
+
+(On claude.ai: add a custom connector pointing at https://ai.planfi.app/mcp/free.)
 
 > **Access — free for personal use.** The planfi MCP is free to try (a small monthly allowance, no key needed). Heavy automated abuse forced us to add limits — but it stays **free for personal use**: email **kam@rateapi.dev** and we'll send you a free API key, no charge. (Companies and commercial use have paid plans.) To use a key, pass it as an `Authorization: Bearer pft_…` header in your MCP client config.
 

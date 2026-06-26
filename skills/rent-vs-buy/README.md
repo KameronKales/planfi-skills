@@ -13,7 +13,7 @@ held flat in nominal terms and erodes in real terms), then **deflates** every ou
 
 ## What you need
 
-The skill calls these planfi MCP tools, served from `https://ai.planfi.app/mcp` (public, no auth):
+The skill calls these planfi MCP tools, served from `https://ai.planfi.app/mcp/free` (public, no auth):
 
 - **`analyze_rent_vs_buy`** — the primary engine. Give it the home, carrying costs, rent, the REAL
   rates (home appreciation, rent growth, market return) plus an explicit inflation rate, your
@@ -34,11 +34,13 @@ skill reads back every default it falls back on so you can correct it.
 If the planfi tools aren't connected yet, run:
 
 ```
-claude mcp add --transport http planfi https://ai.planfi.app/mcp
+claude mcp add --transport http planfi https://ai.planfi.app/mcp/free
 ```
 
+> **Try free, then add your key.** The command above adds the **free** connector — `https://ai.planfi.app/mcp/free` (no key needed). Once you create an API key, add a **new** connector with the MCP url — `https://ai.planfi.app/mcp` — and authorize it with your key.
+
 On **claude.ai**: Settings → Connectors → add a custom connector pointing at
-`https://ai.planfi.app/mcp` (no auth). The skill also reminds you to do this if the tools are
+`https://ai.planfi.app/mcp/free` (no auth). The skill also reminds you to do this if the tools are
 missing when you invoke it.
 
 ## Install

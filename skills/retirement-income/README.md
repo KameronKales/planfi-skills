@@ -2,7 +2,7 @@
 
 Plan retirement decumulation: tax-smart withdrawal order, dynamic/variable spending strategies (Guyton-Klinger guardrails, VPW, spending smile, bucket+buffer vs static 4% SWR), Social Security claiming age, ACA healthcare bridge before Medicare, projected RMDs with a tax-torpedo / Roth-conversion-runway readout (`analyze_rmd`), Medicare IRMAA tier and surcharge-cliff lookup (`analyze_irmaa`), Medicare enrollment-timing windows and permanent late-enrollment penalties (`analyze_medicare_enrollment`), guaranteed income, a bond/TIPS ladder income floor, long-term-care cost exposure, and estate-tax exposure. Thin orchestration over the planfi MCP.
 
-It's a **thin orchestration layer** over the public **planfi MCP** (`https://ai.planfi.app/mcp`,
+It's a **thin orchestration layer** over the public **planfi MCP** (`https://ai.planfi.app/mcp/free`,
 public, no auth) — all the math and financial logic live server-side. The skill itself bundles no
 engine; it just gathers inputs and calls the tools.
 
@@ -11,11 +11,13 @@ engine; it just gathers inputs and calls the tools.
 If the planfi tools aren't connected yet, run:
 
 ```
-claude mcp add --transport http planfi https://ai.planfi.app/mcp
+claude mcp add --transport http planfi https://ai.planfi.app/mcp/free
 ```
 
+> **Try free, then add your key.** The command above adds the **free** connector — `https://ai.planfi.app/mcp/free` (no key needed). Once you create an API key, add a **new** connector with the MCP url — `https://ai.planfi.app/mcp` — and authorize it with your key.
+
 On **claude.ai**: Settings → Connectors → add a custom connector pointing at
-`https://ai.planfi.app/mcp` (no auth). The skill also reminds you to do this if the tools are
+`https://ai.planfi.app/mcp/free` (no auth). The skill also reminds you to do this if the tools are
 missing when you invoke it.
 
 ## Install

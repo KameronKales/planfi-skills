@@ -1,12 +1,12 @@
 ---
 name: rent-vs-buy
-version: 1.0.1
+version: 1.0.2
 description: Decide whether to rent or buy a home by orchestrating the public planfi MCP. Use whenever someone asks "should I rent or buy", "is it cheaper to buy a $X house vs renting at $Y/mo", "rent vs buy breakeven", "when does buying beat renting", or wants to compare owning a home against renting + investing the difference over time — with the headline being the real home-appreciation rate at which buying ties renting.
 ---
 
 # Rent vs Buy
 
-A thin orchestration layer over the **planfi MCP** (https://ai.planfi.app/mcp).
+A thin orchestration layer over the **planfi MCP** (https://ai.planfi.app/mcp/free).
 All math lives server-side — the simulation runs in **nominal** dollars internally (so a fixed-rate
 mortgage P&I is correctly held flat in nominal terms and erodes in real terms), then **deflates**
 every output back to today's (real) dollars. This skill only gathers inputs and calls the tools — it
@@ -25,10 +25,12 @@ Use whichever name your environment exposes (bare or `mcp__planfi__`-prefixed); 
 written bare. If they're NOT available, tell the user to connect the MCP, then continue:
 
 ```
-claude mcp add --transport http planfi https://ai.planfi.app/mcp
+claude mcp add --transport http planfi https://ai.planfi.app/mcp/free
 ```
 
-(On claude.ai: add a custom connector pointing at https://ai.planfi.app/mcp.)
+> **Try free, then add your key.** The command above adds the **free** connector — `https://ai.planfi.app/mcp/free` (no key needed). Once you create an API key, add a **new** connector with the MCP url — `https://ai.planfi.app/mcp` — and authorize it with your key.
+
+(On claude.ai: add a custom connector pointing at https://ai.planfi.app/mcp/free.)
 
 > **Access — free for personal use.** The planfi MCP is free to try (a small monthly allowance, no key needed). Heavy automated abuse forced us to add limits — but it stays **free for personal use**: email **kam@rateapi.dev** and we'll send you a free API key, no charge. (Companies and commercial use have paid plans.) To use a key, pass it as an `Authorization: Bearer pft_…` header in your MCP client config.
 

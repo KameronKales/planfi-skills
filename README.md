@@ -1,6 +1,6 @@
 # PlanFi Skills — AI personal-finance & FIRE planning for Claude Code
 
-[![Claude Code Agent Skills](https://img.shields.io/badge/Claude%20Code-Agent%20Skills-d97757)](https://docs.claude.com/en/docs/claude-code) [![Powered by MCP](https://img.shields.io/badge/MCP-ai.planfi.app-3b82f6)](https://ai.planfi.app/mcp) [![License: MIT](https://img.shields.io/badge/License-MIT-22c55e.svg)](./LICENSE) ![Skills](https://img.shields.io/badge/skills-17-f59e0b)
+[![Claude Code Agent Skills](https://img.shields.io/badge/Claude%20Code-Agent%20Skills-d97757)](https://docs.claude.com/en/docs/claude-code) [![Powered by MCP](https://img.shields.io/badge/MCP-ai.planfi.app-3b82f6)](https://ai.planfi.app/mcp/free) [![License: MIT](https://img.shields.io/badge/License-MIT-22c55e.svg)](./LICENSE) ![Skills](https://img.shields.io/badge/skills-17-f59e0b)
 
 **Free, open-source [Claude Code](https://docs.claude.com/en/docs/claude-code) Agent Skills that turn Claude into a personal-finance & FIRE planning analyst.** Ask in plain English and get real numbers back — net-worth projections, your FIRE (financial-independence / retire-early) age, Monte Carlo success rates, tax savings, debt-payoff timelines, rent-vs-buy break-evens, and rental-property returns.
 
@@ -71,8 +71,10 @@ npx skills add holdequity/planfi-<name>            # just one skill (table below
 
 ```
 claude plugin marketplace add KameronKales/planfi-skills
-claude mcp add --transport http planfi https://ai.planfi.app/mcp
+claude mcp add --transport http planfi https://ai.planfi.app/mcp/free
 ```
+
+> **Try free, then add your key.** The command above adds the **free** connector — `https://ai.planfi.app/mcp/free` (no key needed). Once you create an API key, add a **new** connector with the production MCP url — `https://ai.planfi.app/mcp` — and authorize it with your key (companies and commercial use need a key; personal use stays free — email **kam@rateapi.dev**).
 
 Then just ask.
 
@@ -100,13 +102,13 @@ Then just ask.
 
 ## How it works
 
-These skills are **thin orchestration** — they contain no financial logic of their own. Every calculation, every tax rule, and 150+ years of historical market data live server-side on the public **planfi MCP** (`https://ai.planfi.app/mcp` — no auth, no API key). A skill gathers your inputs, calls the right tool(s), and shows the result. Any MCP-capable agent gets the same answers; the skills just make it one-click inside Claude Code.
+These skills are **thin orchestration** — they contain no financial logic of their own. Every calculation, every tax rule, and 150+ years of historical market data live server-side on the public **planfi MCP** (`https://ai.planfi.app/mcp/free` — no auth, no API key). A skill gathers your inputs, calls the right tool(s), and shows the result. Any MCP-capable agent gets the same answers; the skills just make it one-click inside Claude Code.
 
 ## Use it in any MCP client (not just Claude Code)
 
 The skills are Claude Code packaging — but the engine is a standard
 [Model Context Protocol](https://modelcontextprotocol.io) server at
-`https://ai.planfi.app/mcp` (Streamable HTTP, no auth). Connect it from any
+`https://ai.planfi.app/mcp/free` (Streamable HTTP, no auth). Connect it from any
 MCP-capable agent and you get all the same tools directly. And because every
 tool is **self-orchestrating** — it reports its own assumed defaults and
 suggests the next step — you get solid answers even without a skill wrapper.
@@ -116,23 +118,23 @@ Most clients take an `mcpServers` config block:
 ```json
 {
   "mcpServers": {
-    "planfi": { "type": "http", "url": "https://ai.planfi.app/mcp" }
+    "planfi": { "type": "http", "url": "https://ai.planfi.app/mcp/free" }
   }
 }
 ```
 
 | Client | How to add it |
 |--------|---------------|
-| **Claude Code** | `claude mcp add --transport http planfi https://ai.planfi.app/mcp` |
+| **Claude Code** | `claude mcp add --transport http planfi https://ai.planfi.app/mcp/free` |
 | **Cursor** | add the block above to `~/.cursor/mcp.json` (field: `url`) |
 | **Windsurf** | `~/.codeium/windsurf/mcp_config.json` (field: `serverUrl`) |
 | **Cline / VS Code** | paste the block into the Cline MCP settings |
-| **Claude Desktop & stdio-only clients** | bridge with `npx -y mcp-remote https://ai.planfi.app/mcp` |
+| **Claude Desktop & stdio-only clients** | bridge with `npx -y mcp-remote https://ai.planfi.app/mcp/free` |
 | **ChatGPT (custom connectors / Deep Research)** | add a connector pointing at the MCP URL |
 | **Custom / your own agent** | it's plain MCP Streamable HTTP — POST JSON-RPC `tools/list` / `tools/call` to the URL with `Accept: application/json, text/event-stream` |
 
 Field names vary slightly by client and version — check your client's MCP docs;
-the URL is always `https://ai.planfi.app/mcp`.
+the URL is always `https://ai.planfi.app/mcp/free`.
 
 ## Why PlanFi Skills
 
@@ -150,7 +152,7 @@ the URL is always `https://ai.planfi.app/mcp`.
 
 **What is FIRE?** Financial Independence, Retire Early: the point where your investments can cover your spending indefinitely.
 
-**Can I use the tools without Claude Code?** Yes — connect the MCP (`https://ai.planfi.app/mcp`) from any MCP-capable client. The skills just make it turnkey in Claude Code.
+**Can I use the tools without Claude Code?** Yes — connect the MCP (`https://ai.planfi.app/mcp/free`) from any MCP-capable client. The skills just make it turnkey in Claude Code.
 
 ---
 

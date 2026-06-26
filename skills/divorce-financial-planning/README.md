@@ -4,7 +4,7 @@ Model the financial split of a divorcing household — QDRO division of 401k/pen
 
 **Example — equalizing a 50/50 split:** *"We're divorcing after 12 years. He has a $400k 401(k), I have a $100k Roth, and there's a $300k brokerage (basis $100k). We agreed 50/50 and I take the splits — what's the equalizing payment?"* → the skill calls `analyze_divorce_qdro({ accounts: [...], spouseB: { otherTaxableIncome: 60000, postDivorceFilingStatus: "single" }, marriageYears: 12, targetSplitPct: 0.5 })` and leads with each spouse's after-tax award, the equalizing cash payment (who pays whom), and the divorced-spouse Social Security flag — because $1 of Roth ≠ $1 of traditional ≠ $1 of taxable once you discount for tax (fictional figures).
 
-It's a **thin orchestration layer** over the public **planfi MCP** (`https://ai.planfi.app/mcp`,
+It's a **thin orchestration layer** over the public **planfi MCP** (`https://ai.planfi.app/mcp/free`,
 public, no auth) — all the math and financial logic live server-side. The skill itself bundles no
 engine; it just gathers inputs and calls the tools.
 
@@ -13,11 +13,13 @@ engine; it just gathers inputs and calls the tools.
 If the planfi tools aren't connected yet, run:
 
 ```
-claude mcp add --transport http planfi https://ai.planfi.app/mcp
+claude mcp add --transport http planfi https://ai.planfi.app/mcp/free
 ```
 
+> **Try free, then add your key.** The command above adds the **free** connector — `https://ai.planfi.app/mcp/free` (no key needed). Once you create an API key, add a **new** connector with the MCP url — `https://ai.planfi.app/mcp` — and authorize it with your key.
+
 On **claude.ai**: Settings → Connectors → add a custom connector pointing at
-`https://ai.planfi.app/mcp` (no auth). The skill also reminds you to do this if the tools are
+`https://ai.planfi.app/mcp/free` (no auth). The skill also reminds you to do this if the tools are
 missing when you invoke it.
 
 ## Install

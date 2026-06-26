@@ -1,7 +1,7 @@
 {
   "name": "rent-vs-buy",
   "version": "1.0.0",
-  "description": "Decide rent vs buy: nominal-then-deflated simulation of BUY vs RENT net worth across horizons, with the headline real home-appreciation break-even rate, invest-the-difference both directions, mortgage payoff/crossover, and federal LTCG + NIIT tax overlay. Thin orchestration over the public planfi MCP (https://ai.planfi.app/mcp).",
+  "description": "Decide rent vs buy: nominal-then-deflated simulation of BUY vs RENT net worth across horizons, with the headline real home-appreciation break-even rate, invest-the-difference both directions, mortgage payoff/crossover, and federal LTCG + NIIT tax overlay. Thin orchestration over the public planfi MCP (https://ai.planfi.app/mcp/free).",
   "license": "MIT",
   "author": {
     "name": "holdequity",

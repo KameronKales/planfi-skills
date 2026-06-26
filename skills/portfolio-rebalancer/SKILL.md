@@ -1,12 +1,12 @@
 ---
 name: portfolio-rebalancer
-version: 1.0.1
+version: 1.0.2
 description: Cross-account, tax-aware rebalance trade generator. Use whenever someone has holdings across taxable / IRA / Roth / 401(k) and an IPS target allocation and wants the actual buy/sell trades to get back to target — e.g. "rebalance my accounts", "generate the trades to hit my 70/30 target", "which buy-sell trades get me back to my IPS", "my portfolio drifted, what do I trade across my IRA/Roth/401k/taxable", "rebalance my $1.2M back to target — harvest losses and don't trigger short-term gains". It detects drift beyond a rebalancing band, orders trades tax-advantaged-accounts-first, avoids short-term gains, harvests losses within the wash-sale window, and routes new contributions to underweight classes.
 ---
 
 # Portfolio Rebalancer
 
-A thin orchestration layer over the **planfi MCP** (https://ai.planfi.app/mcp).
+A thin orchestration layer over the **planfi MCP** (https://ai.planfi.app/mcp/free).
 All drift detection, tax-aware trade ordering, LTCG/NIIT pricing, wash-sale logic, and contribution
 routing live server-side. This skill only gathers inputs and calls the tools — it does **not**
 compute anything locally and bakes in no defaults of its own. Read-only.
@@ -27,10 +27,12 @@ your environment exposes (bare or `mcp__planfi__`-prefixed); below they are writ
 If they're NOT available, tell the user to connect the MCP, then continue:
 
 ```
-claude mcp add --transport http planfi https://ai.planfi.app/mcp
+claude mcp add --transport http planfi https://ai.planfi.app/mcp/free
 ```
 
-(On claude.ai: add a custom connector pointing at https://ai.planfi.app/mcp.)
+> **Try free, then add your key.** The command above adds the **free** connector — `https://ai.planfi.app/mcp/free` (no key needed). Once you create an API key, add a **new** connector with the MCP url — `https://ai.planfi.app/mcp` — and authorize it with your key.
+
+(On claude.ai: add a custom connector pointing at https://ai.planfi.app/mcp/free.)
 
 > **Access — free for personal use.** The planfi MCP is free to try (a small monthly allowance, no key needed). Heavy automated abuse forced us to add limits — but it stays **free for personal use**: email **kam@rateapi.dev** and we'll send you a free API key, no charge. (Companies and commercial use have paid plans.) To use a key, pass it as an `Authorization: Bearer pft_…` header in your MCP client config.
 
