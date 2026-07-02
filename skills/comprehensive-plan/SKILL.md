@@ -1,6 +1,6 @@
 ---
 name: comprehensive-plan
-version: 1.0.3
+version: 1.0.4
 description: Build ONE comprehensive financial plan in a single deliverable by orchestrating the public planfi MCP — retirement/FIRE projection with Monte Carlo backtesting, 529 college funding status, estate-tax exposure, and life/disability protection gaps, every number engine-computed. Use whenever someone asks for "a financial plan", "build me a financial plan", "give me a complete / comprehensive / full plan", "I want one full plan covering retirement, college, estate, and insurance", "do a complete financial review / checkup", or wants one cohesive document instead of several separate analyses — e.g. "build me a financial plan, I'm 40 making $150k with $300k invested" or "give me a comprehensive plan covering everything".
 ---
 
@@ -20,7 +20,7 @@ trade-offs, goal-solving, scenario comparison, "what if I change X" forks), use 
 ## Step 0 — Make sure the planfi tools are connected
 
 This skill uses these tools (may be namespaced, e.g. `mcp__planfi__assemble_comprehensive_plan`):
-`assemble_comprehensive_plan` (the orchestrator), plus `generate_financial_plan`,
+`assemble_comprehensive_plan` (the orchestrator), plus `generate_financial_plan`, `what_if_plan`,
 `generate_financial_insights`, `generate_action_plan`, `analyze_estate_exposure`,
 `analyze_529_optimization`, `analyze_insurance_needs`, `analyze_education_credits`, and
 `run_backtesting` for follow-on deep dives.
@@ -106,6 +106,10 @@ It returns one envelope with four nested sections — surface each:
 ## Step 3 — Enrich each section on demand (chained via `{ plan_id }`)
 
 Only when the user wants to drill into one section — each of these is its own routed intent:
+
+### "what if we change one thing — contributions, retirement age, salary, spend — against the saved plan" / "scale back our 401ks next year, what happens to the full plan" → `what_if_plan`
+
+**Always CALL `what_if_plan` for a single-change scenario against the saved plan — never re-send the household and never narrate a scenario outcome the tool did not compute.** Pass `plan_id` + a small `changes` array of typed ops; unchanged fields are inherited automatically and the result includes a computed `scenario_summary` (baseline vs scenario, delta, FIRE ages) to quote verbatim. For the FULL document under the new assumptions, chain the returned scenario `plan_id` into `assemble_comprehensive_plan`.
 
 ### "what's my chance of running out of money" / "run the Monte Carlo" / "stress-test my retirement against history" / "would my portfolio have survived 1929 or the 1970s" / "how safe is a 4% withdrawal for me" → `run_backtesting`
 

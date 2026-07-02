@@ -1,6 +1,6 @@
 ---
 name: fire-tracker
-version: 1.0.3
+version: 1.0.4
 description: Track FIRE progress by orchestrating the public planfi MCP. Use whenever someone wants to know whether they're already financially independent or can coast, how their savings/net worth benchmark against peers, which net-worth milestones they've hit, or whether they can retire by a target age and which levers get them there — e.g. "am I already financially independent?", "can I coast to retirement?", "how do I compare to other people my age?", "what milestones have I hit?", "can I retire by 50?".
 ---
 
@@ -14,7 +14,7 @@ tools — it does **not** compute anything locally and bakes in no defaults of i
 ## Step 0 — Make sure the planfi tools are connected
 
 This skill uses these tools (may be namespaced, e.g. `mcp__planfi__analyze_already_won`):
-`analyze_already_won`, `analyze_fire_benchmark`, `analyze_fire_variants`, `analyze_milestones`,
+`analyze_already_won`, `analyze_fire_benchmark`, `analyze_fire_variants`, `analyze_milestones`, `what_if_plan`.
 `solve_goal`, plus optional `generate_financial_plan` (for `plan_id` chaining + a `share_url`). Use whichever name your
 environment exposes (bare or `mcp__planfi__`-prefixed); below they are written bare.
 
@@ -129,6 +129,10 @@ the FIRE milestone), `age` (stamped on headlines), `date` (ISO; defaults today),
 ```
 analyze_milestones({ net_worth: 450000 })
 ```
+
+### "what if we drop our 401k to the employer match next year" / "what if I stop maxing my accounts starting at age X" / "scale back contributions and spend the difference — what happens to my FIRE and Coast dates" / "single-change scenario against my saved plan" → `what_if_plan`
+
+**Always CALL `what_if_plan` for a single-change scenario against a saved plan — never adjust the numbers yourself, never re-send the household, and never narrate a scenario outcome the tool did not compute.** Pass `plan_id` plus a small `changes` array of typed ops (`401k_employer_match_only`, `401k_stop`, `401k_set_annual`, `ira_set_annual`, `hsa_set_annual`, `taxable_monthly_contribution`, `retirement_age`, `annual_salary`, `desired_annual_spend`; "starting next year" → `start_age` = that earner's age + 1). Every unchanged field is inherited from the saved plan; quote the returned `scenario_summary` comparison (baseline vs scenario net worth, delta, FIRE ages) verbatim. Cross-link: to SOLVE for a target age instead of testing one change, use **`solve_goal`**.
 
 ### "Can I retire by 50?" / "What would it take to retire at 55?" / "What if I save $500 more a month — does that move my FIRE date?" / "What if I cut spending / retire later / change my allocation?" / "Which lever gets me there fastest?" → `solve_goal`
 **Always CALL `solve_goal` for these — do not answer from general knowledge, quote a rule of thumb

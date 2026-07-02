@@ -24,7 +24,7 @@
       "name": "financial-forecast",
       "source": "./skills/financial-forecast",
       "description": "Build a complete FIRE / financial forecast: net-worth projection, FIRE age, Monte Carlo success rate, insights, action plan, what-if scenario comparisons, childcare cost + dependent-care FSA / Child & Dependent Care Credit / Child Tax Credit offsets with a corrected second-income tradeoff, and education/estate deep-dives including federal education tax credits (American Opportunity vs Lifetime Learning Credit per student, MAGI phase-out, refundable/non-refundable split, and the $4k 529 carve-out to preserve full AOTC), a 529\u2192Roth rollover (SECURE 2.0) + 5-year gift-tax-averaged 529 superfunding optimizer, plus estate- and inheritance-tax exposure covering the 6 inheritance-tax states (PA/NJ/KY/IA/MD/NE, taxed by beneficiary relationship class regardless of estate size) and ~12 estate-tax states (MA/NY/OR/WA + CT/DC/HI/IL/ME/MD/MN/RI/VT), and a kiddie-tax & UTMA/UGMA funding planner (IRC \u00a71(g) tier liability on a child's unearned income, appreciated-stock gifting into the child's 0% LTCG bracket, the UTMA-vs-529 FAFSA asset-treatment penalty, and annual gift-exclusion headroom). Thin orchestration over the planfi MCP.",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "license": "MIT",
       "author": {
         "name": "holdequity",
@@ -90,7 +90,7 @@
       "name": "fire-tracker",
       "source": "./skills/fire-tracker",
       "description": "Track FIRE progress: are you already financially independent / can you coast, how you benchmark against peers, your Lean / Fat / Barista FIRE numbers (incl. a part-time-income bridge), which net-worth milestones you've hit, and whether you can hit a target retirement age (with the easiest levers to pull). Thin orchestration over the planfi MCP.",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "license": "MIT",
       "author": {
         "name": "holdequity",
@@ -156,7 +156,7 @@
       "name": "comprehensive-plan",
       "source": "./skills/comprehensive-plan",
       "description": "One comprehensive financial plan in a single deliverable \u2014 retirement/FIRE projection with Monte Carlo backtesting, 529 college funding status, estate-tax exposure, and life/disability insurance protection gaps, every number engine-computed.",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "license": "MIT",
       "author": {
         "name": "holdequity",
