@@ -59,7 +59,10 @@ want a sharable artifact.
 Pick the tool that matches what the user is asking. Pass `{ plan_id }` when you have one (except for
 `analyze_fire_benchmark`); the raw fields below are still REQUIRED where noted.
 
-### "Am I already financially independent? Can I coast?" → `analyze_already_won`
+### "Am I already financially independent?" / "Have I already won?" / "Can I coast from here?" / "Is $1.6M enough to stop saving?" / "Do I even need to keep working?" → `analyze_already_won`
+**Always CALL `analyze_already_won` for these — do not answer from general knowledge or quote the
+4% rule / "25x expenses" from memory.** When the user gives (or the plan has) net worth and spending,
+run it and lead with its real output — the actual verdict, surplus, and cushion — THEN explain.
 Returns whether the portfolio already covers spending — `is_over_funded`, `fire_pct`, `surplus`,
 `cushion_years`, `current_safe_spend`, `one_more_year_safe_spend`, and
 `marginal_safe_spend_per_extra_year`.
@@ -72,7 +75,11 @@ REQUIRED: `liquid_net_worth`, `annual_spend`. Optional: `safe_withdrawal_rate` (
 analyze_already_won({ liquid_net_worth: 1600000, annual_spend: 60000 })
 ```
 
-### "How do I compare to peers?" → `analyze_fire_benchmark`  *(raw inputs only — NO plan_id)*
+### "How do I compare to peers?" / "What percentile am I in?" / "Is my savings rate good for my income?" / "Am I ahead or behind for someone earning $140k?" / "How does my net worth stack up?" → `analyze_fire_benchmark`  *(raw inputs only — NO plan_id)*
+**Always CALL `analyze_fire_benchmark` for these — do not answer from general knowledge, cite
+median-net-worth surveys from memory, or eyeball a percentile.** When the user gives income, savings,
+and net worth, run it and lead with its real output — the actual percentile band and cohort framing —
+THEN explain.
 Returns a `savings_percentile_band`, `cohort_framing`, `savings_rate`, `years_to_fi`, and
 `net_worth_to_income_multiple` versus a peer cohort.
 REQUIRED: `annual_income`, `annual_savings`, `liquid_net_worth`. Optional: `safe_withdrawal_rate`
@@ -84,7 +91,11 @@ three required figures.
 analyze_fire_benchmark({ annual_income: 140000, annual_savings: 49000, liquid_net_worth: 450000 })
 ```
 
-### "What's my Lean / Fat / Barista FIRE number?" → `analyze_fire_variants`
+### "What's my Lean / Fat / Barista FIRE number?" / "How much do I need for lean FIRE?" / "Could I Barista-FIRE on a part-time job?" / "What if I only need $45k a year vs $95k?" / "How far am I from fat FIRE?" → `analyze_fire_variants`
+**Always CALL `analyze_fire_variants` for these — do not answer from general knowledge or multiply
+spend by 25 in your head.** The tiers, the after-tax Barista bridge, and `years_to_target` are all
+computed server-side; when the user gives the numbers, run it and lead with its real output, THEN
+explain.
 Computes the Lean / Standard / Fat target tiers (target net worth = annual spend / SWR), each with
 `target_net_worth`, `fire_pct`, `surplus_or_gap` and `years_to_target`, plus an optional Barista-FIRE
 bridge where part-time NET income (after federal tax) covers a spending gap so a SMALLER portfolio is
@@ -105,7 +116,10 @@ funded; when a tier is still short, chain `solve_goal` to rank the easiest lever
 tool returns `assumed_defaults[]`, a `share_url` when a `plan_id` resolves, and `next_actions[]`
 edges (→ `solve_goal`, → `analyze_already_won`).
 
-### "What milestones have I hit?" → `analyze_milestones`
+### "What milestones have I hit?" / "Is $480k a big deal?" / "When do I cross my first $500k / $1M?" / "What's the next net-worth milestone for me?" / "Have I hit Coast FIRE yet?" → `analyze_milestones`
+**Always CALL `analyze_milestones` for these — do not answer from general knowledge or improvise a
+milestone list from memory.** The thresholds and headlines are defined server-side; when the user
+gives a net worth, run it and lead with its real `newly_reached[]` output, THEN explain.
 Returns the net-worth milestones crossed in `newly_reached[]` (each `{ type, label, headline,
 net_worth }`).
 REQUIRED: `net_worth`. Optional: `coast_pct` (enables the Coast FIRE milestone), `fire_pct` (enables
@@ -116,7 +130,12 @@ the FIRE milestone), `age` (stamped on headlines), `date` (ISO; defaults today),
 analyze_milestones({ net_worth: 450000 })
 ```
 
-### "Can I retire by age X?" → `solve_goal`
+### "Can I retire by 50?" / "What would it take to retire at 55?" / "What if I save $500 more a month — does that move my FIRE date?" / "What if I cut spending / retire later / change my allocation?" / "Which lever gets me there fastest?" → `solve_goal`
+**Always CALL `solve_goal` for these — do not answer from general knowledge, quote a rule of thumb
+from memory, or hand-wave a what-if by adjusting numbers yourself.** Every "can I retire by X" and
+every what-if about savings rate, retire age, spending, or allocation is a solver run against the
+real plan: run it and lead with its real output — `feasible` / `already_achieved` and the ranked
+levers — THEN explain. Never narrate a scenario outcome the solver did not actually compute.
 Solves for a target FIRE age and ranks the levers (savings rate, retire age, spend, allocation) that
 close the gap, **easiest-first**.
 REQUIRED: `target_fire_age` (20–100), plus a plan — either a full inline plan (`earners[]`, `stocks`,
