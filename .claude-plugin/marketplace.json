@@ -5,7 +5,7 @@
     "url": "https://github.com/holdequity"
   },
   "metadata": {
-    "description": "planfi skills — financial planning and real-estate investment analysis powered by the public planfi MCP.",
+    "description": "planfi skills \u2014 financial planning and real-estate investment analysis powered by the public planfi MCP.",
     "version": "1.5.0"
   },
   "plugins": [
@@ -23,8 +23,8 @@
     {
       "name": "financial-forecast",
       "source": "./skills/financial-forecast",
-      "description": "Build a complete FIRE / financial forecast: net-worth projection, FIRE age, Monte Carlo success rate, insights, action plan, what-if scenario comparisons, childcare cost + dependent-care FSA / Child & Dependent Care Credit / Child Tax Credit offsets with a corrected second-income tradeoff, and education/estate deep-dives including federal education tax credits (American Opportunity vs Lifetime Learning Credit per student, MAGI phase-out, refundable/non-refundable split, and the $4k 529 carve-out to preserve full AOTC), a 529→Roth rollover (SECURE 2.0) + 5-year gift-tax-averaged 529 superfunding optimizer, plus estate- and inheritance-tax exposure covering the 6 inheritance-tax states (PA/NJ/KY/IA/MD/NE, taxed by beneficiary relationship class regardless of estate size) and ~12 estate-tax states (MA/NY/OR/WA + CT/DC/HI/IL/ME/MD/MN/RI/VT), and a kiddie-tax & UTMA/UGMA funding planner (IRC §1(g) tier liability on a child's unearned income, appreciated-stock gifting into the child's 0% LTCG bracket, the UTMA-vs-529 FAFSA asset-treatment penalty, and annual gift-exclusion headroom). Thin orchestration over the planfi MCP.",
-      "version": "1.3.0",
+      "description": "Build a complete FIRE / financial forecast: net-worth projection, FIRE age, Monte Carlo success rate, insights, action plan, what-if scenario comparisons, childcare cost + dependent-care FSA / Child & Dependent Care Credit / Child Tax Credit offsets with a corrected second-income tradeoff, and education/estate deep-dives including federal education tax credits (American Opportunity vs Lifetime Learning Credit per student, MAGI phase-out, refundable/non-refundable split, and the $4k 529 carve-out to preserve full AOTC), a 529\u2192Roth rollover (SECURE 2.0) + 5-year gift-tax-averaged 529 superfunding optimizer, plus estate- and inheritance-tax exposure covering the 6 inheritance-tax states (PA/NJ/KY/IA/MD/NE, taxed by beneficiary relationship class regardless of estate size) and ~12 estate-tax states (MA/NY/OR/WA + CT/DC/HI/IL/ME/MD/MN/RI/VT), and a kiddie-tax & UTMA/UGMA funding planner (IRC \u00a71(g) tier liability on a child's unearned income, appreciated-stock gifting into the child's 0% LTCG bracket, the UTMA-vs-529 FAFSA asset-treatment penalty, and annual gift-exclusion headroom). Thin orchestration over the planfi MCP.",
+      "version": "1.3.1",
       "license": "MIT",
       "author": {
         "name": "holdequity",
@@ -34,7 +34,7 @@
     {
       "name": "rent-vs-buy",
       "source": "./skills/rent-vs-buy",
-      "description": "Rent vs buy: breakeven home-appreciation rate (pre & after tax), per-horizon BUY-vs-RENT net worth, payoff/crossover years, invest-the-difference opportunity cost, and — if they already own — home-equity extraction (HELOC revolving draw/repay, cash-out refi, or reverse mortgage) as a liquidity/decumulation lever instead of selling. Thin orchestration over the planfi MCP.",
+      "description": "Rent vs buy: breakeven home-appreciation rate (pre & after tax), per-horizon BUY-vs-RENT net worth, payoff/crossover years, invest-the-difference opportunity cost, and \u2014 if they already own \u2014 home-equity extraction (HELOC revolving draw/repay, cash-out refi, or reverse mortgage) as a liquidity/decumulation lever instead of selling. Thin orchestration over the planfi MCP.",
       "version": "1.0.0",
       "license": "MIT",
       "author": {
@@ -45,7 +45,7 @@
     {
       "name": "tax-optimizer",
       "source": "./skills/tax-optimizer",
-      "description": "Cut taxes across accounts and years: broad tax optimization (asset location, tax-loss harvesting, charitable), a dedicated charitable-giving optimizer (analyze_charitable_giving — DAF bunching to clear the standard deduction, a QCD at 70½+ that lowers AGI/IRMAA/Social-Security taxation, and donating long-term appreciated stock/RSUs in-kind to avoid capital gains while still taking the FMV deduction), multi-year ISO/conversion timing (AMT/NIIT/IRMAA-aware), Roth conversion ladders, mega-backdoor Roth space, advanced surtaxes (NIIT/AMT/state), tax-gain harvesting (how much long-term gain you can realize at the 0% capital-gains rate before NIIT/IRMAA bites), tax-loss harvesting (analyze_tax_loss_harvesting — harvest lot-level unrealized losses to offset realized gains and up to $3,000 of ordinary income, flag wash sales, suggest replacement securities), a lot-level tax-lot optimizer (analyze_tax_lots — pick which individual purchase lots to sell, HIFO vs FIFO vs specific-ID, to minimize gain or maximize harvested loss; ST-vs-LT split per lot; the §1091 wash-sale disallowance + basis adjustment on equities; and the crypto carve-out where property losses are harvestable and can be repurchased immediately, with a proposed-future-law toggle), retirement relocation / state-tax arbitrage with full 50-state + DC progressive single/MFJ brackets (compare the lifetime after-tax cost of retiring in one state vs another), the federal Saver's Credit (50/20/10% of retirement contributions for lower/moderate income), 72(t)/SEPP substantially-equal-payment sizing for penalty-free access to retirement money before 59½, and HSA-as-retirement optimization (analyze_hsa_retirement — max-fund + invest the triple-tax-advantaged HSA, the receipt-shoebox deferred-reimbursement strategy, the 6-months-before-Medicare contribution stop, and the age-65 tax-free-medical vs taxable-non-medical pivot). Thin orchestration over the planfi MCP.",
+      "description": "Cut taxes across accounts and years: broad tax optimization (asset location, tax-loss harvesting, charitable), a dedicated charitable-giving optimizer (analyze_charitable_giving \u2014 DAF bunching to clear the standard deduction, a QCD at 70\u00bd+ that lowers AGI/IRMAA/Social-Security taxation, and donating long-term appreciated stock/RSUs in-kind to avoid capital gains while still taking the FMV deduction), multi-year ISO/conversion timing (AMT/NIIT/IRMAA-aware), Roth conversion ladders, mega-backdoor Roth space, advanced surtaxes (NIIT/AMT/state), tax-gain harvesting (how much long-term gain you can realize at the 0% capital-gains rate before NIIT/IRMAA bites), tax-loss harvesting (analyze_tax_loss_harvesting \u2014 harvest lot-level unrealized losses to offset realized gains and up to $3,000 of ordinary income, flag wash sales, suggest replacement securities), a lot-level tax-lot optimizer (analyze_tax_lots \u2014 pick which individual purchase lots to sell, HIFO vs FIFO vs specific-ID, to minimize gain or maximize harvested loss; ST-vs-LT split per lot; the \u00a71091 wash-sale disallowance + basis adjustment on equities; and the crypto carve-out where property losses are harvestable and can be repurchased immediately, with a proposed-future-law toggle), retirement relocation / state-tax arbitrage with full 50-state + DC progressive single/MFJ brackets (compare the lifetime after-tax cost of retiring in one state vs another), the federal Saver's Credit (50/20/10% of retirement contributions for lower/moderate income), 72(t)/SEPP substantially-equal-payment sizing for penalty-free access to retirement money before 59\u00bd, and HSA-as-retirement optimization (analyze_hsa_retirement \u2014 max-fund + invest the triple-tax-advantaged HSA, the receipt-shoebox deferred-reimbursement strategy, the 6-months-before-Medicare contribution stop, and the age-65 tax-free-medical vs taxable-non-medical pivot). Thin orchestration over the planfi MCP.",
       "version": "1.8.0",
       "license": "MIT",
       "author": {
@@ -67,7 +67,7 @@
     {
       "name": "retirement-income",
       "source": "./skills/retirement-income",
-      "description": "Plan retirement decumulation: tax-smart withdrawal order, dynamic/variable spending strategies (Guyton-Klinger guardrails, VPW, spending smile, bucket+buffer vs a static 4% SWR), Social Security claiming age, ACA healthcare bridge before Medicare, projected RMDs with a tax-torpedo and Roth-conversion-runway readout (the low-income years before RMDs start at 73/75), Medicare IRMAA tier and surcharge-cliff lookup, Medicare enrollment-timing windows and permanent late-enrollment penalties (the 7-month IEP, the Part B 10%-per-year and Part D 1%-per-month permanent penalties in lifetime dollars, the creditable-coverage test for working past 65 with COBRA not creditable for Part B, the 8-month SEP, and the one-time 6-month Medigap guaranteed-issue window), the post-SECURE-Act inherited-IRA 10-year drawdown for non-spouse beneficiaries (required-vs-optional annual RMDs, lump-vs-even-vs-bracket-fill tax comparison, and the year-10 cliff), estate-tax exposure, guaranteed income (pension lump-sum vs lifetime monthly, SPIA/QLAC vs DIY portfolio), a dedicated defined-benefit pension election analyzer (lump-sum-vs-lifetime implied-IRR and break-even age, 50%/75%/100% joint-and-survivor vs single-life, COLA-vs-non-COLA real erosion over a 25-30 year retirement, and the actuarial early-vs-normal claiming reduction — with the real income floor folding into the forecast), deferred/accumulation annuity products (fixed-indexed FIA cap/participation crediting, RILA buffer/floor, multi-year-guaranteed MYGA, and variable annuities with a GLWB rollup rider) with non-qualified exclusion-ratio tax and 1035 exchanges, a bond/TIPS ladder income floor that guarantees the first N years of spending (sequence-of-returns protection), a mass-market safe-cash ladder for the same near-term need (FDIC-insured CD ladders — brokered vs bank, early-withdrawal penalty, callable — plus I-Bonds and Series EE savings bonds with their purchase caps and federal tax-deferral / state exemption), and long-term-care cost exposure with a self-insure vs traditional vs hybrid LTC-policy tradeoff (including the impact on a surviving spouse's plan). Ask Claude things like 'I'm 66 and just enrolled in Medicare 30 months late — what's my permanent Part B late penalty?', 'I'm 65 and still working on my employer plan, do I need to sign up for Part B or will I owe a penalty?', or 'I lose my employer coverage in March — how long is my Special Enrollment Period and when does my Medigap guaranteed-issue window close?'. Thin orchestration over the planfi MCP.",
+      "description": "Plan retirement decumulation: tax-smart withdrawal order, dynamic/variable spending strategies (Guyton-Klinger guardrails, VPW, spending smile, bucket+buffer vs a static 4% SWR), Social Security claiming age, ACA healthcare bridge before Medicare, projected RMDs with a tax-torpedo and Roth-conversion-runway readout (the low-income years before RMDs start at 73/75), Medicare IRMAA tier and surcharge-cliff lookup, Medicare enrollment-timing windows and permanent late-enrollment penalties (the 7-month IEP, the Part B 10%-per-year and Part D 1%-per-month permanent penalties in lifetime dollars, the creditable-coverage test for working past 65 with COBRA not creditable for Part B, the 8-month SEP, and the one-time 6-month Medigap guaranteed-issue window), the post-SECURE-Act inherited-IRA 10-year drawdown for non-spouse beneficiaries (required-vs-optional annual RMDs, lump-vs-even-vs-bracket-fill tax comparison, and the year-10 cliff), estate-tax exposure, guaranteed income (pension lump-sum vs lifetime monthly, SPIA/QLAC vs DIY portfolio), a dedicated defined-benefit pension election analyzer (lump-sum-vs-lifetime implied-IRR and break-even age, 50%/75%/100% joint-and-survivor vs single-life, COLA-vs-non-COLA real erosion over a 25-30 year retirement, and the actuarial early-vs-normal claiming reduction \u2014 with the real income floor folding into the forecast), deferred/accumulation annuity products (fixed-indexed FIA cap/participation crediting, RILA buffer/floor, multi-year-guaranteed MYGA, and variable annuities with a GLWB rollup rider) with non-qualified exclusion-ratio tax and 1035 exchanges, a bond/TIPS ladder income floor that guarantees the first N years of spending (sequence-of-returns protection), a mass-market safe-cash ladder for the same near-term need (FDIC-insured CD ladders \u2014 brokered vs bank, early-withdrawal penalty, callable \u2014 plus I-Bonds and Series EE savings bonds with their purchase caps and federal tax-deferral / state exemption), and long-term-care cost exposure with a self-insure vs traditional vs hybrid LTC-policy tradeoff (including the impact on a surviving spouse's plan). Ask Claude things like 'I'm 66 and just enrolled in Medicare 30 months late \u2014 what's my permanent Part B late penalty?', 'I'm 65 and still working on my employer plan, do I need to sign up for Part B or will I owe a penalty?', or 'I lose my employer coverage in March \u2014 how long is my Special Enrollment Period and when does my Medigap guaranteed-issue window close?'. Thin orchestration over the planfi MCP.",
       "version": "1.8.0",
       "license": "MIT",
       "author": {
@@ -90,7 +90,7 @@
       "name": "fire-tracker",
       "source": "./skills/fire-tracker",
       "description": "Track FIRE progress: are you already financially independent / can you coast, how you benchmark against peers, your Lean / Fat / Barista FIRE numbers (incl. a part-time-income bridge), which net-worth milestones you've hit, and whether you can hit a target retirement age (with the easiest levers to pull). Thin orchestration over the planfi MCP.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "license": "MIT",
       "author": {
         "name": "holdequity",
@@ -100,7 +100,7 @@
     {
       "name": "self-employed-planner",
       "source": "./skills/self-employed-planner",
-      "description": "Plan self-employed / business-owner retirement: max Solo 401(k) vs SEP-IRA vs SIMPLE contribution room, owner cash-balance / defined-benefit plan sizing (actuarial annual contribution, §415(b) cap, the DB-plus-Solo-401(k) stacked deductible and backdoor-Roth interaction), the §199A QBI deduction (thresholds, W-2/UBIA cap, SSTB phaseout), the S-corp reasonable-salary tradeoff (payroll tax vs QBI vs retirement room), and estimated/quarterly tax & 90%/110% safe-harbor planning to avoid underpayment penalties. Thin orchestration over the planfi MCP.",
+      "description": "Plan self-employed / business-owner retirement: max Solo 401(k) vs SEP-IRA vs SIMPLE contribution room, owner cash-balance / defined-benefit plan sizing (actuarial annual contribution, \u00a7415(b) cap, the DB-plus-Solo-401(k) stacked deductible and backdoor-Roth interaction), the \u00a7199A QBI deduction (thresholds, W-2/UBIA cap, SSTB phaseout), the S-corp reasonable-salary tradeoff (payroll tax vs QBI vs retirement room), and estimated/quarterly tax & 90%/110% safe-harbor planning to avoid underpayment penalties. Thin orchestration over the planfi MCP.",
       "version": "1.0.0",
       "license": "MIT",
       "author": {
@@ -111,7 +111,7 @@
     {
       "name": "relocation-planner",
       "source": "./skills/relocation-planner",
-      "description": "Compare retirement relocation / state-tax arbitrage by orchestrating the public planfi MCP — how much a move (e.g. CA→TX/FL) saves in state income tax (full 50-state + DC progressive single/MFJ brackets), property tax, estate tax, and cost of living — and model the transition year you actually move in: part-year-resident day-count apportionment, source-based wage/equity/gains sourcing, the resident-state credit for taxes paid to the other state, reciprocity agreements, and the 183-day/domicile statutory-residency test. Ask Claude things like 'I moved from CA to TX in July, how do I file two state returns?', 'my RSUs vested after I moved from NY to CA — which state taxes them and do I get a credit?', or 'does PA–NJ reciprocity mean I only owe my home state?'.",
+      "description": "Compare retirement relocation / state-tax arbitrage by orchestrating the public planfi MCP \u2014 how much a move (e.g. CA\u2192TX/FL) saves in state income tax (full 50-state + DC progressive single/MFJ brackets), property tax, estate tax, and cost of living \u2014 and model the transition year you actually move in: part-year-resident day-count apportionment, source-based wage/equity/gains sourcing, the resident-state credit for taxes paid to the other state, reciprocity agreements, and the 183-day/domicile statutory-residency test. Ask Claude things like 'I moved from CA to TX in July, how do I file two state returns?', 'my RSUs vested after I moved from NY to CA \u2014 which state taxes them and do I get a credit?', or 'does PA\u2013NJ reciprocity mean I only owe my home state?'.",
       "version": "1.2.0",
       "license": "MIT",
       "author": {
@@ -122,7 +122,7 @@
     {
       "name": "long-term-rental-analyzer",
       "source": "./skills/long-term-rental-analyzer",
-      "description": "Long-term-rental after-tax analyzer: 27.5-yr depreciation shelter, ~25% recapture at sale, 1031 like-kind deferral, a Schedule E P&L (rent, vacancy, opex, NOI), and an IRC §469 passive-activity-loss planner (analyze_passive_losses — the $25k special allowance with its $100k–$150k MAGI phase-out, suspended-loss carryforward schedule, real-estate-professional qualification, and total tax deferred), and a §1031 like-kind exchange planner (analyze_1031_exchange — the 45-day / 180-day deadlines, cash + mortgage-relief boot recognition, gain deferred, replacement-property carryover basis, carried §1250 recapture, and the NPV of deferring vs paying the tax now). Thin orchestration over the planfi MCP.",
+      "description": "Long-term-rental after-tax analyzer: 27.5-yr depreciation shelter, ~25% recapture at sale, 1031 like-kind deferral, a Schedule E P&L (rent, vacancy, opex, NOI), and an IRC \u00a7469 passive-activity-loss planner (analyze_passive_losses \u2014 the $25k special allowance with its $100k\u2013$150k MAGI phase-out, suspended-loss carryforward schedule, real-estate-professional qualification, and total tax deferred), and a \u00a71031 like-kind exchange planner (analyze_1031_exchange \u2014 the 45-day / 180-day deadlines, cash + mortgage-relief boot recognition, gain deferred, replacement-property carryover basis, carried \u00a71250 recapture, and the NPV of deferring vs paying the tax now). Thin orchestration over the planfi MCP.",
       "version": "1.2.0",
       "license": "MIT",
       "author": {
@@ -133,7 +133,7 @@
     {
       "name": "startup-equity-planner",
       "source": "./skills/startup-equity-planner",
-      "description": "Model the irreversible 30-day 83(b) early-exercise election and the QSBS section 1202 gain exclusion (up to $10M/10x basis) for startup founders, early employees, and C-corp sellers — by orchestrating the public planfi MCP.",
+      "description": "Model the irreversible 30-day 83(b) early-exercise election and the QSBS section 1202 gain exclusion (up to $10M/10x basis) for startup founders, early employees, and C-corp sellers \u2014 by orchestrating the public planfi MCP.",
       "version": "1.0.0",
       "license": "MIT",
       "author": {
@@ -144,7 +144,7 @@
     {
       "name": "portfolio-rebalancer",
       "source": "./skills/portfolio-rebalancer",
-      "description": "Cross-account, tax-aware rebalance trade generator: takes holdings across taxable / traditional IRA / Roth / 401(k) plus an IPS target allocation, detects drift beyond the rebalancing band, and returns the actual buy/sell trade list to return to target — rebalancing tax-advantaged accounts first (zero gain realized), avoiding short-term gains in taxable, harvesting loss lots within the wash-sale ±30-day window, and routing new contributions to underweight classes before selling. Thin orchestration over the planfi MCP.",
+      "description": "Cross-account, tax-aware rebalance trade generator: takes holdings across taxable / traditional IRA / Roth / 401(k) plus an IPS target allocation, detects drift beyond the rebalancing band, and returns the actual buy/sell trade list to return to target \u2014 rebalancing tax-advantaged accounts first (zero gain realized), avoiding short-term gains in taxable, harvesting loss lots within the wash-sale \u00b130-day window, and routing new contributions to underweight classes before selling. Thin orchestration over the planfi MCP.",
       "version": "1.0.0",
       "license": "MIT",
       "author": {
@@ -155,8 +155,8 @@
     {
       "name": "comprehensive-plan",
       "source": "./skills/comprehensive-plan",
-      "description": "One comprehensive financial plan in a single deliverable — retirement/FIRE projection with Monte Carlo backtesting, 529 college funding status, estate-tax exposure, and life/disability insurance protection gaps, every number engine-computed.",
-      "version": "1.0.0",
+      "description": "One comprehensive financial plan in a single deliverable \u2014 retirement/FIRE projection with Monte Carlo backtesting, 529 college funding status, estate-tax exposure, and life/disability insurance protection gaps, every number engine-computed.",
+      "version": "1.0.1",
       "license": "MIT",
       "author": {
         "name": "holdequity",
@@ -166,7 +166,7 @@
     {
       "name": "deferred-comp",
       "source": "./skills/deferred-comp",
-      "description": "Model nonqualified deferred comp (NQDC / 409A) elections for high-W2 execs — defer-now-vs-take-now, lump-vs-installment distribution, and bracket/IRMAA/NIIT/additional-Medicare smoothing into low-income FIRE bridge years, with employer unsecured-creditor risk. Thin orchestration over the planfi MCP.",
+      "description": "Model nonqualified deferred comp (NQDC / 409A) elections for high-W2 execs \u2014 defer-now-vs-take-now, lump-vs-installment distribution, and bracket/IRMAA/NIIT/additional-Medicare smoothing into low-income FIRE bridge years, with employer unsecured-creditor risk. Thin orchestration over the planfi MCP.",
       "version": "1.0.0",
       "license": "MIT",
       "author": {
@@ -177,7 +177,7 @@
     {
       "name": "divorce-financial-planning",
       "source": "./skills/divorce-financial-planning",
-      "description": "Model the financial split of a divorcing household — QDRO division of 401k/pension/IRA, after-tax equalization of Roth vs traditional vs taxable awards, the equalizing cash payment, pension present-value split, home buyout vs §121-split sale, post-2019 alimony after-tax cost, MFJ→single bracket shift, and divorced-spouse Social Security (10-year rule) eligibility.",
+      "description": "Model the financial split of a divorcing household \u2014 QDRO division of 401k/pension/IRA, after-tax equalization of Roth vs traditional vs taxable awards, the equalizing cash payment, pension present-value split, home buyout vs \u00a7121-split sale, post-2019 alimony after-tax cost, MFJ\u2192single bracket shift, and divorced-spouse Social Security (10-year rule) eligibility.",
       "version": "1.0.0",
       "license": "MIT",
       "author": {

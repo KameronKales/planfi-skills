@@ -1,6 +1,6 @@
 ---
 name: fire-tracker
-version: 1.0.2
+version: 1.0.3
 description: Track FIRE progress by orchestrating the public planfi MCP. Use whenever someone wants to know whether they're already financially independent or can coast, how their savings/net worth benchmark against peers, which net-worth milestones they've hit, or whether they can retire by a target age and which levers get them there — e.g. "am I already financially independent?", "can I coast to retirement?", "how do I compare to other people my age?", "what milestones have I hit?", "can I retire by 50?".
 ---
 

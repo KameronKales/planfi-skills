@@ -1,6 +1,6 @@
 ---
 name: comprehensive-plan
-version: 1.0.2
+version: 1.0.3
 description: Build ONE comprehensive financial plan in a single deliverable by orchestrating the public planfi MCP — retirement/FIRE projection with Monte Carlo backtesting, 529 college funding status, estate-tax exposure, and life/disability protection gaps, every number engine-computed. Use whenever someone asks for "a financial plan", "build me a financial plan", "give me a complete / comprehensive / full plan", "I want one full plan covering retirement, college, estate, and insurance", "do a complete financial review / checkup", or wants one cohesive document instead of several separate analyses — e.g. "build me a financial plan, I'm 40 making $150k with $300k invested" or "give me a comprehensive plan covering everything".
 ---
 
